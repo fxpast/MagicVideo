@@ -7,27 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB56B0681C9728C1000C3030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56B0671C9728C1000C3030 /* AppDelegate.swift */; };
-		DB56B06A1C9728C1000C3030 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56B0691C9728C1000C3030 /* ViewController.swift */; };
-		DB56B06D1C9728C1000C3030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB56B06B1C9728C1000C3030 /* Main.storyboard */; };
-		DB56B0701C9728C1000C3030 /* MagicVideo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB56B06E1C9728C1000C3030 /* MagicVideo.xcdatamodeld */; };
-		DB56B0721C9728C1000C3030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB56B0711C9728C1000C3030 /* Assets.xcassets */; };
-		DB56B0751C9728C2000C3030 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB56B0731C9728C2000C3030 /* LaunchScreen.storyboard */; };
+		DBC92D231C98580D00127F8C /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC92D1E1C98580D00127F8C /* EditorView.swift */; };
+		DBC92D241C98580D00127F8C /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC92D1F1C98580D00127F8C /* GridViewController.swift */; };
+		DBC92D251C98580D00127F8C /* VideoMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC92D201C98580D00127F8C /* VideoMod.swift */; };
+		DBC92D261C98580D00127F8C /* SentMemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC92D211C98580D00127F8C /* SentMemes.swift */; };
+		DBC92D271C98580D00127F8C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC92D221C98580D00127F8C /* TableViewController.swift */; };
+		DBEEC3AA1C98569100FFA9AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEC3A91C98569100FFA9AE /* AppDelegate.swift */; };
+		DBEEC3AF1C98569100FFA9AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBEEC3AD1C98569100FFA9AE /* Main.storyboard */; };
+		DBEEC3B11C98569100FFA9AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBEEC3B01C98569100FFA9AE /* Assets.xcassets */; };
+		DBEEC3B41C98569100FFA9AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBEEC3B21C98569100FFA9AE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DB56B0641C9728C1000C3030 /* MagicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB56B0671C9728C1000C3030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB56B0691C9728C1000C3030 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DB56B06C1C9728C1000C3030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DB56B06F1C9728C1000C3030 /* MagicVideo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MagicVideo.xcdatamodel; sourceTree = "<group>"; };
-		DB56B0711C9728C1000C3030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB56B0741C9728C2000C3030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DB56B0761C9728C2000C3030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC92D1E1C98580D00127F8C /* EditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
+		DBC92D1F1C98580D00127F8C /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		DBC92D201C98580D00127F8C /* VideoMod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoMod.swift; sourceTree = "<group>"; };
+		DBC92D211C98580D00127F8C /* SentMemes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemes.swift; sourceTree = "<group>"; };
+		DBC92D221C98580D00127F8C /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		DBEEC3A61C98569100FFA9AE /* MagicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBEEC3A91C98569100FFA9AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBEEC3AE1C98569100FFA9AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBEEC3B01C98569100FFA9AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBEEC3B31C98569100FFA9AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBEEC3B51C98569100FFA9AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DB56B0611C9728C1000C3030 /* Frameworks */ = {
+		DBEEC3A31C98569100FFA9AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,32 +43,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DB56B05B1C9728C1000C3030 = {
+		DBEEC39D1C98569100FFA9AE = {
 			isa = PBXGroup;
 			children = (
-				DB56B0661C9728C1000C3030 /* MagicVideo */,
-				DB56B0651C9728C1000C3030 /* Products */,
+				DBEEC3A81C98569100FFA9AE /* MagicVideo */,
+				DBEEC3A71C98569100FFA9AE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DB56B0651C9728C1000C3030 /* Products */ = {
+		DBEEC3A71C98569100FFA9AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DB56B0641C9728C1000C3030 /* MagicVideo.app */,
+				DBEEC3A61C98569100FFA9AE /* MagicVideo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DB56B0661C9728C1000C3030 /* MagicVideo */ = {
+		DBEEC3A81C98569100FFA9AE /* MagicVideo */ = {
 			isa = PBXGroup;
 			children = (
-				DB56B0671C9728C1000C3030 /* AppDelegate.swift */,
-				DB56B0691C9728C1000C3030 /* ViewController.swift */,
-				DB56B06B1C9728C1000C3030 /* Main.storyboard */,
-				DB56B0711C9728C1000C3030 /* Assets.xcassets */,
-				DB56B0731C9728C2000C3030 /* LaunchScreen.storyboard */,
-				DB56B0761C9728C2000C3030 /* Info.plist */,
-				DB56B06E1C9728C1000C3030 /* MagicVideo.xcdatamodeld */,
+				DBC92D1E1C98580D00127F8C /* EditorView.swift */,
+				DBC92D1F1C98580D00127F8C /* GridViewController.swift */,
+				DBC92D201C98580D00127F8C /* VideoMod.swift */,
+				DBC92D211C98580D00127F8C /* SentMemes.swift */,
+				DBC92D221C98580D00127F8C /* TableViewController.swift */,
+				DBEEC3A91C98569100FFA9AE /* AppDelegate.swift */,
+				DBEEC3AD1C98569100FFA9AE /* Main.storyboard */,
+				DBEEC3B01C98569100FFA9AE /* Assets.xcassets */,
+				DBEEC3B21C98569100FFA9AE /* LaunchScreen.storyboard */,
+				DBEEC3B51C98569100FFA9AE /* Info.plist */,
 			);
 			path = MagicVideo;
 			sourceTree = "<group>";
@@ -70,13 +79,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DB56B0631C9728C1000C3030 /* MagicVideo */ = {
+		DBEEC3A51C98569100FFA9AE /* MagicVideo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB56B0791C9728C2000C3030 /* Build configuration list for PBXNativeTarget "MagicVideo" */;
+			buildConfigurationList = DBEEC3B81C98569100FFA9AE /* Build configuration list for PBXNativeTarget "MagicVideo" */;
 			buildPhases = (
-				DB56B0601C9728C1000C3030 /* Sources */,
-				DB56B0611C9728C1000C3030 /* Frameworks */,
-				DB56B0621C9728C1000C3030 /* Resources */,
+				DBEEC3A21C98569100FFA9AE /* Sources */,
+				DBEEC3A31C98569100FFA9AE /* Frameworks */,
+				DBEEC3A41C98569100FFA9AE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,26 +93,26 @@
 			);
 			name = MagicVideo;
 			productName = MagicVideo;
-			productReference = DB56B0641C9728C1000C3030 /* MagicVideo.app */;
+			productReference = DBEEC3A61C98569100FFA9AE /* MagicVideo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DB56B05C1C9728C1000C3030 /* Project object */ = {
+		DBEEC39E1C98569100FFA9AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Pastouret Roger";
 				TargetAttributes = {
-					DB56B0631C9728C1000C3030 = {
+					DBEEC3A51C98569100FFA9AE = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = TNC26WW3G9;
 					};
 				};
 			};
-			buildConfigurationList = DB56B05F1C9728C1000C3030 /* Build configuration list for PBXProject "MagicVideo" */;
+			buildConfigurationList = DBEEC3A11C98569100FFA9AE /* Build configuration list for PBXProject "MagicVideo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -111,55 +120,58 @@
 				en,
 				Base,
 			);
-			mainGroup = DB56B05B1C9728C1000C3030;
-			productRefGroup = DB56B0651C9728C1000C3030 /* Products */;
+			mainGroup = DBEEC39D1C98569100FFA9AE;
+			productRefGroup = DBEEC3A71C98569100FFA9AE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DB56B0631C9728C1000C3030 /* MagicVideo */,
+				DBEEC3A51C98569100FFA9AE /* MagicVideo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DB56B0621C9728C1000C3030 /* Resources */ = {
+		DBEEC3A41C98569100FFA9AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB56B0751C9728C2000C3030 /* LaunchScreen.storyboard in Resources */,
-				DB56B0721C9728C1000C3030 /* Assets.xcassets in Resources */,
-				DB56B06D1C9728C1000C3030 /* Main.storyboard in Resources */,
+				DBEEC3B41C98569100FFA9AE /* LaunchScreen.storyboard in Resources */,
+				DBEEC3B11C98569100FFA9AE /* Assets.xcassets in Resources */,
+				DBEEC3AF1C98569100FFA9AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DB56B0601C9728C1000C3030 /* Sources */ = {
+		DBEEC3A21C98569100FFA9AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB56B06A1C9728C1000C3030 /* ViewController.swift in Sources */,
-				DB56B0681C9728C1000C3030 /* AppDelegate.swift in Sources */,
-				DB56B0701C9728C1000C3030 /* MagicVideo.xcdatamodeld in Sources */,
+				DBC92D241C98580D00127F8C /* GridViewController.swift in Sources */,
+				DBC92D271C98580D00127F8C /* TableViewController.swift in Sources */,
+				DBC92D251C98580D00127F8C /* VideoMod.swift in Sources */,
+				DBC92D231C98580D00127F8C /* EditorView.swift in Sources */,
+				DBC92D261C98580D00127F8C /* SentMemes.swift in Sources */,
+				DBEEC3AA1C98569100FFA9AE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DB56B06B1C9728C1000C3030 /* Main.storyboard */ = {
+		DBEEC3AD1C98569100FFA9AE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DB56B06C1C9728C1000C3030 /* Base */,
+				DBEEC3AE1C98569100FFA9AE /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		DB56B0731C9728C2000C3030 /* LaunchScreen.storyboard */ = {
+		DBEEC3B21C98569100FFA9AE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DB56B0741C9728C2000C3030 /* Base */,
+				DBEEC3B31C98569100FFA9AE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -167,7 +179,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DB56B0771C9728C2000C3030 /* Debug */ = {
+		DBEEC3B61C98569100FFA9AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,7 +224,7 @@
 			};
 			name = Debug;
 		};
-		DB56B0781C9728C2000C3030 /* Release */ = {
+		DBEEC3B71C98569100FFA9AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -250,68 +262,52 @@
 			};
 			name = Release;
 		};
-		DB56B07A1C9728C2000C3030 /* Debug */ = {
+		DBEEC3B91C98569100FFA9AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MagicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prv.MagicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		DB56B07B1C9728C2000C3030 /* Release */ = {
+		DBEEC3BA1C98569100FFA9AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MagicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prv.MagicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DB56B05F1C9728C1000C3030 /* Build configuration list for PBXProject "MagicVideo" */ = {
+		DBEEC3A11C98569100FFA9AE /* Build configuration list for PBXProject "MagicVideo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB56B0771C9728C2000C3030 /* Debug */,
-				DB56B0781C9728C2000C3030 /* Release */,
+				DBEEC3B61C98569100FFA9AE /* Debug */,
+				DBEEC3B71C98569100FFA9AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB56B0791C9728C2000C3030 /* Build configuration list for PBXNativeTarget "MagicVideo" */ = {
+		DBEEC3B81C98569100FFA9AE /* Build configuration list for PBXNativeTarget "MagicVideo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB56B07A1C9728C2000C3030 /* Debug */,
-				DB56B07B1C9728C2000C3030 /* Release */,
+				DBEEC3B91C98569100FFA9AE /* Debug */,
+				DBEEC3BA1C98569100FFA9AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DB56B06E1C9728C1000C3030 /* MagicVideo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DB56B06F1C9728C1000C3030 /* MagicVideo.xcdatamodel */,
-			);
-			currentVersion = DB56B06F1C9728C1000C3030 /* MagicVideo.xcdatamodel */;
-			path = MagicVideo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = DB56B05C1C9728C1000C3030 /* Project object */;
+	rootObject = DBEEC39E1C98569100FFA9AE /* Project object */;
 }
