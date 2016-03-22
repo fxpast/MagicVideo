@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DBEEC3A51C98569100FFA9AE"
+               BlueprintIdentifier = "DBC9A9E31CA08CF4002C2CDF"
                BuildableName = "MagicVideo.app"
                BlueprintName = "MagicVideo"
                ReferencedContainer = "container:MagicVideo.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DBEEC3A51C98569100FFA9AE"
+            BlueprintIdentifier = "DBC9A9E31CA08CF4002C2CDF"
             BuildableName = "MagicVideo.app"
             BlueprintName = "MagicVideo"
             ReferencedContainer = "container:MagicVideo.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DBEEC3A51C98569100FFA9AE"
+            BlueprintIdentifier = "DBC9A9E31CA08CF4002C2CDF"
             BuildableName = "MagicVideo.app"
             BlueprintName = "MagicVideo"
             ReferencedContainer = "container:MagicVideo.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DBEEC3A51C98569100FFA9AE"
+            BlueprintIdentifier = "DBC9A9E31CA08CF4002C2CDF"
             BuildableName = "MagicVideo.app"
             BlueprintName = "MagicVideo"
             ReferencedContainer = "container:MagicVideo.xcodeproj">

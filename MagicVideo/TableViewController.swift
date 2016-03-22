@@ -1,10 +1,4 @@
-//
-//  TableViewController.swift
-//  MemeMe2.0
-//
-//  Created by MacbookPRV on 15/01/2016.
-//  Copyright © 2016 Pastouret Roger. All rights reserved.
-//
+
 
 import Foundation
 import UIKit
@@ -19,8 +13,10 @@ class TableViewController: UITableViewController {
         
         super.viewWillAppear(animated)
         
-        let sentmemes = SentMemes.singleton
-        if let _ = sentmemes.memeArray {
+        let savvideo = SavVideo.singleton()
+        let tableau = savvideo.TableauVideo as Array
+        if tableau.count > 0
+        {
             buttonEdit.enabled=true
             tableView.reloadData()
         }
@@ -28,20 +24,26 @@ class TableViewController: UITableViewController {
             buttonEdit.enabled=false
         }
         
+        
+        
     }
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         super.tableView(tableView, numberOfRowsInSection: section)
-        
-        let sentmemes = SentMemes.singleton
-        if let _ = sentmemes.memeArray {
-            return sentmemes.memeArray.count
+                
+        let savvideo = SavVideo.singleton()
+        let tableau = savvideo.TableauVideo as Array
+        if tableau.count > 0
+        {
+            return  tableau.count
         }
         else {
             return 0
         }
+        
+        
         
     }
     
@@ -57,15 +59,18 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         //delete row
-        let sentmemes = SentMemes.singleton
-        if let _ = sentmemes.memeArray {
-            sentmemes.memeArray.removeAtIndex(indexPath.row)
+        let savvideo = SavVideo.singleton()
+        var tableau = savvideo.TableauVideo as Array
+        
+         if tableau.count > 0 {
+            tableau.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Left)
-            if sentmemes.memeArray.count == 0 {
-                buttonEdit.title="Edit"
-                buttonEdit.enabled=false
-                editing = false
-            }
+        }
+        
+        if tableau.count == 0 {
+            buttonEdit.title="Edit"
+            buttonEdit.enabled=false
+            editing = false
         }
         
         
@@ -81,10 +86,13 @@ class TableViewController: UITableViewController {
         super.tableView(tableView, cellForRowAtIndexPath: indexPath)
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        let sentmemes = SentMemes.singleton
-        let meme = sentmemes.memeArray[indexPath.row]
-        cell.imageView?.image=meme.memedImage
-        cell.textLabel?.text=meme.textTop + " " + meme.textBottom
+        let savvideo = SavVideo.singleton()
+        let tableau = savvideo.TableauVideo as Array
+        
+        let modelvideo = tableau[indexPath.row] as! ModelVideo
+        
+        cell.imageView?.image=modelvideo.imageVideo
+        cell.textLabel?.text=modelvideo.adresseVideo.absoluteString
         cell.textLabel?.textAlignment=NSTextAlignment.Center
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         return cell

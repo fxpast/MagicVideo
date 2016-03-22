@@ -7,33 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DBC92D231C98580D00127F8C /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC92D1E1C98580D00127F8C /* EditorView.swift */; };
-		DBC92D241C98580D00127F8C /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC92D1F1C98580D00127F8C /* GridViewController.swift */; };
-		DBC92D251C98580D00127F8C /* VideoMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC92D201C98580D00127F8C /* VideoMod.swift */; };
-		DBC92D261C98580D00127F8C /* SentMemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC92D211C98580D00127F8C /* SentMemes.swift */; };
-		DBC92D271C98580D00127F8C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC92D221C98580D00127F8C /* TableViewController.swift */; };
-		DBEEC3AA1C98569100FFA9AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEC3A91C98569100FFA9AE /* AppDelegate.swift */; };
-		DBEEC3AF1C98569100FFA9AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBEEC3AD1C98569100FFA9AE /* Main.storyboard */; };
-		DBEEC3B11C98569100FFA9AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBEEC3B01C98569100FFA9AE /* Assets.xcassets */; };
-		DBEEC3B41C98569100FFA9AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBEEC3B21C98569100FFA9AE /* LaunchScreen.storyboard */; };
+		DB6011751CA08ECE00DF2E68 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6011741CA08ECE00DF2E68 /* TableViewController.m */; };
+		DB60117B1CA08F1800DF2E68 /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6011781CA08F1800DF2E68 /* APLEAGLView.m */; };
+		DB60117C1CA08F1800DF2E68 /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB60117A1CA08F1800DF2E68 /* APLViewController.m */; };
+		DB6011831CA08F2600DF2E68 /* ModelVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB60117E1CA08F2600DF2E68 /* ModelVideo.m */; };
+		DB6011841CA08F2600DF2E68 /* SavVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6011801CA08F2600DF2E68 /* SavVideo.m */; };
+		DB6011851CA08F2600DF2E68 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DB6011811CA08F2600DF2E68 /* Shader.fsh */; };
+		DB6011861CA08F2600DF2E68 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = DB6011821CA08F2600DF2E68 /* Shader.vsh */; };
+		DBC9A9E91CA08CF4002C2CDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9A9E81CA08CF4002C2CDF /* main.m */; };
+		DBC9A9EC1CA08CF4002C2CDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9A9EB1CA08CF4002C2CDF /* AppDelegate.m */; };
+		DBC9A9F21CA08CF4002C2CDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC9A9F01CA08CF4002C2CDF /* Main.storyboard */; };
+		DBC9A9F51CA08CF4002C2CDF /* MagicVideo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBC9A9F31CA08CF4002C2CDF /* MagicVideo.xcdatamodeld */; };
+		DBC9A9F71CA08CF4002C2CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC9A9F61CA08CF4002C2CDF /* Assets.xcassets */; };
+		DBC9A9FA1CA08CF4002C2CDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC9A9F81CA08CF4002C2CDF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DBC92D1E1C98580D00127F8C /* EditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
-		DBC92D1F1C98580D00127F8C /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
-		DBC92D201C98580D00127F8C /* VideoMod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoMod.swift; sourceTree = "<group>"; };
-		DBC92D211C98580D00127F8C /* SentMemes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemes.swift; sourceTree = "<group>"; };
-		DBC92D221C98580D00127F8C /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		DBEEC3A61C98569100FFA9AE /* MagicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBEEC3A91C98569100FFA9AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBEEC3AE1C98569100FFA9AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DBEEC3B01C98569100FFA9AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DBEEC3B31C98569100FFA9AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DBEEC3B51C98569100FFA9AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB6011741CA08ECE00DF2E68 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		DB6011761CA08EDF00DF2E68 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		DB6011771CA08F1800DF2E68 /* APLEAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLEAGLView.h; sourceTree = "<group>"; };
+		DB6011781CA08F1800DF2E68 /* APLEAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLEAGLView.m; sourceTree = "<group>"; };
+		DB6011791CA08F1800DF2E68 /* APLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLViewController.h; sourceTree = "<group>"; };
+		DB60117A1CA08F1800DF2E68 /* APLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLViewController.m; sourceTree = "<group>"; };
+		DB60117D1CA08F2600DF2E68 /* ModelVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelVideo.h; sourceTree = "<group>"; };
+		DB60117E1CA08F2600DF2E68 /* ModelVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelVideo.m; sourceTree = "<group>"; };
+		DB60117F1CA08F2600DF2E68 /* SavVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavVideo.h; sourceTree = "<group>"; };
+		DB6011801CA08F2600DF2E68 /* SavVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavVideo.m; sourceTree = "<group>"; };
+		DB6011811CA08F2600DF2E68 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		DB6011821CA08F2600DF2E68 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		DBC9A9E41CA08CF4002C2CDF /* MagicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC9A9E81CA08CF4002C2CDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBC9A9EA1CA08CF4002C2CDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DBC9A9EB1CA08CF4002C2CDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DBC9A9F11CA08CF4002C2CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBC9A9F41CA08CF4002C2CDF /* MagicVideo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MagicVideo.xcdatamodel; sourceTree = "<group>"; };
+		DBC9A9F61CA08CF4002C2CDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBC9A9F91CA08CF4002C2CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBC9A9FB1CA08CF4002C2CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DBEEC3A31C98569100FFA9AE /* Frameworks */ = {
+		DBC9A9E11CA08CF4002C2CDF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,49 +57,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DBEEC39D1C98569100FFA9AE = {
+		DBC9A9DB1CA08CF4002C2CDF = {
 			isa = PBXGroup;
 			children = (
-				DBEEC3A81C98569100FFA9AE /* MagicVideo */,
-				DBEEC3A71C98569100FFA9AE /* Products */,
+				DBC9A9E61CA08CF4002C2CDF /* MagicVideo */,
+				DBC9A9E51CA08CF4002C2CDF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DBEEC3A71C98569100FFA9AE /* Products */ = {
+		DBC9A9E51CA08CF4002C2CDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DBEEC3A61C98569100FFA9AE /* MagicVideo.app */,
+				DBC9A9E41CA08CF4002C2CDF /* MagicVideo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DBEEC3A81C98569100FFA9AE /* MagicVideo */ = {
+		DBC9A9E61CA08CF4002C2CDF /* MagicVideo */ = {
 			isa = PBXGroup;
 			children = (
-				DBC92D1E1C98580D00127F8C /* EditorView.swift */,
-				DBC92D1F1C98580D00127F8C /* GridViewController.swift */,
-				DBC92D201C98580D00127F8C /* VideoMod.swift */,
-				DBC92D211C98580D00127F8C /* SentMemes.swift */,
-				DBC92D221C98580D00127F8C /* TableViewController.swift */,
-				DBEEC3A91C98569100FFA9AE /* AppDelegate.swift */,
-				DBEEC3AD1C98569100FFA9AE /* Main.storyboard */,
-				DBEEC3B01C98569100FFA9AE /* Assets.xcassets */,
-				DBEEC3B21C98569100FFA9AE /* LaunchScreen.storyboard */,
-				DBEEC3B51C98569100FFA9AE /* Info.plist */,
+				DB60117D1CA08F2600DF2E68 /* ModelVideo.h */,
+				DB60117E1CA08F2600DF2E68 /* ModelVideo.m */,
+				DB60117F1CA08F2600DF2E68 /* SavVideo.h */,
+				DB6011801CA08F2600DF2E68 /* SavVideo.m */,
+				DB6011811CA08F2600DF2E68 /* Shader.fsh */,
+				DB6011821CA08F2600DF2E68 /* Shader.vsh */,
+				DB6011771CA08F1800DF2E68 /* APLEAGLView.h */,
+				DB6011781CA08F1800DF2E68 /* APLEAGLView.m */,
+				DB6011791CA08F1800DF2E68 /* APLViewController.h */,
+				DB60117A1CA08F1800DF2E68 /* APLViewController.m */,
+				DBC9A9EA1CA08CF4002C2CDF /* AppDelegate.h */,
+				DBC9A9EB1CA08CF4002C2CDF /* AppDelegate.m */,
+				DB6011761CA08EDF00DF2E68 /* TableViewController.h */,
+				DB6011741CA08ECE00DF2E68 /* TableViewController.m */,
+				DBC9A9F01CA08CF4002C2CDF /* Main.storyboard */,
+				DBC9A9F61CA08CF4002C2CDF /* Assets.xcassets */,
+				DBC9A9F81CA08CF4002C2CDF /* LaunchScreen.storyboard */,
+				DBC9A9FB1CA08CF4002C2CDF /* Info.plist */,
+				DBC9A9F31CA08CF4002C2CDF /* MagicVideo.xcdatamodeld */,
+				DBC9A9E71CA08CF4002C2CDF /* Supporting Files */,
 			);
 			path = MagicVideo;
+			sourceTree = "<group>";
+		};
+		DBC9A9E71CA08CF4002C2CDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBC9A9E81CA08CF4002C2CDF /* main.m */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DBEEC3A51C98569100FFA9AE /* MagicVideo */ = {
+		DBC9A9E31CA08CF4002C2CDF /* MagicVideo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBEEC3B81C98569100FFA9AE /* Build configuration list for PBXNativeTarget "MagicVideo" */;
+			buildConfigurationList = DBC9A9FE1CA08CF4002C2CDF /* Build configuration list for PBXNativeTarget "MagicVideo" */;
 			buildPhases = (
-				DBEEC3A21C98569100FFA9AE /* Sources */,
-				DBEEC3A31C98569100FFA9AE /* Frameworks */,
-				DBEEC3A41C98569100FFA9AE /* Resources */,
+				DBC9A9E01CA08CF4002C2CDF /* Sources */,
+				DBC9A9E11CA08CF4002C2CDF /* Frameworks */,
+				DBC9A9E21CA08CF4002C2CDF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -93,26 +125,25 @@
 			);
 			name = MagicVideo;
 			productName = MagicVideo;
-			productReference = DBEEC3A61C98569100FFA9AE /* MagicVideo.app */;
+			productReference = DBC9A9E41CA08CF4002C2CDF /* MagicVideo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DBEEC39E1C98569100FFA9AE /* Project object */ = {
+		DBC9A9DC1CA08CF4002C2CDF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Pastouret Roger";
 				TargetAttributes = {
-					DBEEC3A51C98569100FFA9AE = {
+					DBC9A9E31CA08CF4002C2CDF = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = TNC26WW3G9;
 					};
 				};
 			};
-			buildConfigurationList = DBEEC3A11C98569100FFA9AE /* Build configuration list for PBXProject "MagicVideo" */;
+			buildConfigurationList = DBC9A9DF1CA08CF4002C2CDF /* Build configuration list for PBXProject "MagicVideo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -120,58 +151,62 @@
 				en,
 				Base,
 			);
-			mainGroup = DBEEC39D1C98569100FFA9AE;
-			productRefGroup = DBEEC3A71C98569100FFA9AE /* Products */;
+			mainGroup = DBC9A9DB1CA08CF4002C2CDF;
+			productRefGroup = DBC9A9E51CA08CF4002C2CDF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DBEEC3A51C98569100FFA9AE /* MagicVideo */,
+				DBC9A9E31CA08CF4002C2CDF /* MagicVideo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DBEEC3A41C98569100FFA9AE /* Resources */ = {
+		DBC9A9E21CA08CF4002C2CDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBEEC3B41C98569100FFA9AE /* LaunchScreen.storyboard in Resources */,
-				DBEEC3B11C98569100FFA9AE /* Assets.xcassets in Resources */,
-				DBEEC3AF1C98569100FFA9AE /* Main.storyboard in Resources */,
+				DB6011851CA08F2600DF2E68 /* Shader.fsh in Resources */,
+				DBC9A9FA1CA08CF4002C2CDF /* LaunchScreen.storyboard in Resources */,
+				DBC9A9F71CA08CF4002C2CDF /* Assets.xcassets in Resources */,
+				DBC9A9F21CA08CF4002C2CDF /* Main.storyboard in Resources */,
+				DB6011861CA08F2600DF2E68 /* Shader.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DBEEC3A21C98569100FFA9AE /* Sources */ = {
+		DBC9A9E01CA08CF4002C2CDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC92D241C98580D00127F8C /* GridViewController.swift in Sources */,
-				DBC92D271C98580D00127F8C /* TableViewController.swift in Sources */,
-				DBC92D251C98580D00127F8C /* VideoMod.swift in Sources */,
-				DBC92D231C98580D00127F8C /* EditorView.swift in Sources */,
-				DBC92D261C98580D00127F8C /* SentMemes.swift in Sources */,
-				DBEEC3AA1C98569100FFA9AE /* AppDelegate.swift in Sources */,
+				DBC9A9EC1CA08CF4002C2CDF /* AppDelegate.m in Sources */,
+				DB6011831CA08F2600DF2E68 /* ModelVideo.m in Sources */,
+				DBC9A9E91CA08CF4002C2CDF /* main.m in Sources */,
+				DB60117B1CA08F1800DF2E68 /* APLEAGLView.m in Sources */,
+				DBC9A9F51CA08CF4002C2CDF /* MagicVideo.xcdatamodeld in Sources */,
+				DB60117C1CA08F1800DF2E68 /* APLViewController.m in Sources */,
+				DB6011841CA08F2600DF2E68 /* SavVideo.m in Sources */,
+				DB6011751CA08ECE00DF2E68 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DBEEC3AD1C98569100FFA9AE /* Main.storyboard */ = {
+		DBC9A9F01CA08CF4002C2CDF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DBEEC3AE1C98569100FFA9AE /* Base */,
+				DBC9A9F11CA08CF4002C2CDF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		DBEEC3B21C98569100FFA9AE /* LaunchScreen.storyboard */ = {
+		DBC9A9F81CA08CF4002C2CDF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DBEEC3B31C98569100FFA9AE /* Base */,
+				DBC9A9F91CA08CF4002C2CDF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -179,7 +214,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DBEEC3B61C98569100FFA9AE /* Debug */ = {
+		DBC9A9FC1CA08CF4002C2CDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -219,12 +254,11 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
-		DBEEC3B71C98569100FFA9AE /* Release */ = {
+		DBC9A9FD1CA08CF4002C2CDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -262,52 +296,66 @@
 			};
 			name = Release;
 		};
-		DBEEC3B91C98569100FFA9AE /* Debug */ = {
+		DBC9A9FF1CA08CF4002C2CDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MagicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prv.MagicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		DBEEC3BA1C98569100FFA9AE /* Release */ = {
+		DBC9AA001CA08CF4002C2CDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MagicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prv.MagicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DBEEC3A11C98569100FFA9AE /* Build configuration list for PBXProject "MagicVideo" */ = {
+		DBC9A9DF1CA08CF4002C2CDF /* Build configuration list for PBXProject "MagicVideo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DBEEC3B61C98569100FFA9AE /* Debug */,
-				DBEEC3B71C98569100FFA9AE /* Release */,
+				DBC9A9FC1CA08CF4002C2CDF /* Debug */,
+				DBC9A9FD1CA08CF4002C2CDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBEEC3B81C98569100FFA9AE /* Build configuration list for PBXNativeTarget "MagicVideo" */ = {
+		DBC9A9FE1CA08CF4002C2CDF /* Build configuration list for PBXNativeTarget "MagicVideo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DBEEC3B91C98569100FFA9AE /* Debug */,
-				DBEEC3BA1C98569100FFA9AE /* Release */,
+				DBC9A9FF1CA08CF4002C2CDF /* Debug */,
+				DBC9AA001CA08CF4002C2CDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DBC9A9F31CA08CF4002C2CDF /* MagicVideo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DBC9A9F41CA08CF4002C2CDF /* MagicVideo.xcdatamodel */,
+			);
+			currentVersion = DBC9A9F41CA08CF4002C2CDF /* MagicVideo.xcdatamodel */;
+			path = MagicVideo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = DBEEC39E1C98569100FFA9AE /* Project object */;
+	rootObject = DBC9A9DC1CA08CF4002C2CDF /* Project object */;
 }
