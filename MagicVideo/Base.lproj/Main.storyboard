@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="4kJ-aW-17N" id="250-84-fOp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="BXJ-mb-QsW">
+                    <navigationItem key="navigationItem" title="MagicVideo" id="BXJ-mb-QsW">
                         <barButtonItem key="backBarButtonItem" title="MagicVideo" id="slu-67-WJx"/>
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="tfl-sh-xEe">
                             <connections>

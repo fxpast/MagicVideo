@@ -163,30 +163,35 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
 - (IBAction)BTAnnuler:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    wURL=nil;
+    
 }
 
 - (IBAction)BTValider:(id)sender {
     
-    
-    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:wURL options:nil];
-    AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
-    gen.appliesPreferredTrackTransform = YES;
-    CMTime time = CMTimeMakeWithSeconds(0.0, 600);
-    NSError *error = nil;
-    CMTime actualTime;
-    
-    CGImageRef image = [gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
-    UIImage *thumb = [[UIImage alloc] initWithCGImage:image];
-    CGImageRelease(image);
-    
-    
-    wModelvideo = [[ModelVideo alloc] init];
-    wModelvideo.adresseVideo = wURL;
-    wModelvideo.imageVideo = thumb;
-    [wSavvideo.TableauVideo addObject:wModelvideo];
+    if (wURL) {
+        
+        AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:wURL options:nil];
+        AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+        gen.appliesPreferredTrackTransform = YES;
+        CMTime time = CMTimeMakeWithSeconds(0.0, 600);
+        NSError *error = nil;
+        CMTime actualTime;
+        
+        CGImageRef image = [gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
+        UIImage *thumb = [[UIImage alloc] initWithCGImage:image];
+        CGImageRelease(image);
+        
+        
+        wModelvideo = [[ModelVideo alloc] init];
+        wModelvideo.adresseVideo = wURL;
+        wModelvideo.imageVideo = thumb;
+        [wSavvideo.TableauVideo addObject:wModelvideo];
+    }
     
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    wURL=nil;
 }
 
 
@@ -391,6 +396,8 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
     
     picker.delegate = nil;
 }
+
+
 
 - (void)imagePickerControllerDidCancel:(APLImagePickerController *)picker
 {
