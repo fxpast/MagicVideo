@@ -9,7 +9,7 @@
 #import "TableViewController.h"
 #import "SavVideo.h"
 #import "ModelVideo.h"
-
+#import "PlayerSimpleViewController.h"
 
 @interface  TableViewController()
 
@@ -122,7 +122,7 @@
     cell.imageView.image = model.imageVideo;
     cell.textLabel.text = model.adresseVideo.absoluteString;
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType = UITableViewCellAccessoryNone;
     return cell;
     
     
@@ -131,12 +131,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+   
+    ModelVideo *model = [savvideo.TableauVideo objectAtIndex:indexPath.row];
+    savvideo.url = model.adresseVideo;
     
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    UIViewController *controller = [[UIViewController alloc] init];
-    controller.view = cell.imageView;
-    controller.view.contentMode = UIViewContentModeScaleAspectFit;
-    [self.navigationController pushViewController:controller animated:true];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"PlayerSimpleViewController"];
+    [self.navigationController presentViewController:controller animated:NO completion:nil];
+    
     
     
 }

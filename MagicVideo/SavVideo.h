@@ -13,10 +13,12 @@
 @interface SavVideo : NSObject
 {
     NSMutableArray *TableauVideo;
+    NSURL  *url;
     
 }
 
 
+@property (strong, nonatomic) NSURL  *url;
 @property (strong, nonatomic) NSMutableArray *TableauVideo;
 
 

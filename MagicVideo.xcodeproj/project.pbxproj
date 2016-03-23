@@ -20,6 +20,7 @@
 		DBD9D3731CA1A29700D11EED /* AAPLCameraAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9D36E1CA1A29700D11EED /* AAPLCameraAppDelegate.m */; };
 		DBD9D3741CA1A29700D11EED /* AAPLCameraPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9D3701CA1A29700D11EED /* AAPLCameraPreviewView.m */; };
 		DBD9D3751CA1A29700D11EED /* AAPLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9D3721CA1A29700D11EED /* AAPLCameraViewController.m */; };
+		DBD9D37A1CA1C58500D11EED /* PlayerSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9D3791CA1C58500D11EED /* PlayerSimpleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		DBD9D3701CA1A29700D11EED /* AAPLCameraPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCameraPreviewView.m; sourceTree = "<group>"; };
 		DBD9D3711CA1A29700D11EED /* AAPLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraViewController.h; sourceTree = "<group>"; };
 		DBD9D3721CA1A29700D11EED /* AAPLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCameraViewController.m; sourceTree = "<group>"; };
+		DBD9D3781CA1C58500D11EED /* PlayerSimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSimpleViewController.h; sourceTree = "<group>"; };
+		DBD9D3791CA1C58500D11EED /* PlayerSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSimpleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 		DBD9D3681CA1A24100D11EED /* PlayView */ = {
 			isa = PBXGroup;
 			children = (
+				DBD9D3781CA1C58500D11EED /* PlayerSimpleViewController.h */,
+				DBD9D3791CA1C58500D11EED /* PlayerSimpleViewController.m */,
 				DBD9D36A1CA1A27E00D11EED /* AAPLPlayerViewController.h */,
 				DBD9D36B1CA1A27E00D11EED /* AAPLPlayerViewController.m */,
 			);
@@ -216,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC9A9EC1CA08CF4002C2CDF /* AppDelegate.m in Sources */,
+				DBD9D37A1CA1C58500D11EED /* PlayerSimpleViewController.m in Sources */,
 				DB6011831CA08F2600DF2E68 /* ModelVideo.m in Sources */,
 				DBC9A9E91CA08CF4002C2CDF /* main.m in Sources */,
 				DBD9D3731CA1A29700D11EED /* AAPLCameraAppDelegate.m in Sources */,

@@ -373,5 +373,23 @@
             </objects>
             <point key="canvasLocation" x="3184" y="-1193"/>
         </scene>
+        <!--Player Simple View Controller-->
+        <scene sceneID="mJX-qW-Eje">
+            <objects>
+                <viewController storyboardIdentifier="PlayerSimpleViewController" id="mxA-e7-gUg" customClass="PlayerSimpleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u9L-Sj-ue2"/>
+                        <viewControllerLayoutGuide type="bottom" id="GBu-tN-eJS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YeM-2J-580">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djE-Ed-pco" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3000" y="-59"/>
+        </scene>
     </scenes>
 </document>
