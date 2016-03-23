@@ -1,35 +1,57 @@
 //
-//  TableViewController.m
-//  MagicVideo
+//  PopViewController.m
+//  Popovers
 //
-//  Created by MacbookPRV on 21/03/2016.
-//  Copyright © 2016 Pastouret Roger. All rights reserved.
+//  Created by Jay Versluis on 17/10/2015.
+//  Copyright © 2015 Pinkstone Pictures LLC. All rights reserved.
 //
 
-#import "TableViewController.h"
+#import "CategoryTableViewController.h"
 #import "SavVideo.h"
-#import "ModelVideo.h"
-#import "PlayerSimpleViewController.h"
 
-@interface  TableViewController()
 
+@interface CategoryTableViewController()
+{
+     SavVideo *wSavvideo;
+     NSTimer *Wtimer;
+    
+}
+
+@property (strong, nonatomic) NSMutableArray *TableauCategorie;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonEdit;
 
 
 @end
 
+@implementation CategoryTableViewController
 
-@implementation TableViewController {
-    
-    SavVideo *savvideo;
+- (void)viewDidLoad {
+    [super viewDidLoad];
+     self.TableauCategorie =[[NSMutableArray alloc] init];
+     wSavvideo = [SavVideo singleton];
+    //demarrer le Wtimer
+    Wtimer = [NSTimer scheduledTimerWithTimeInterval: 0.50f target: self selector: @selector(AfficheDiffere) userInfo: nil repeats: YES];
+
     
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
--(void) viewDidLoad {
+
+
+-(void) AfficheDiffere {
     
-    savvideo = [SavVideo singleton];
+    
+    if (wSavvideo.addCateg) {
+        [self.TableauCategorie addObject:wSavvideo.categorie];
+        wSavvideo.addCateg = false;
+        [self viewWillAppear:true];
+    }
+    
     
 }
 
@@ -37,9 +59,9 @@
     
     
     [super viewDidAppear:animated];
+
     
-    
-   if (savvideo.TableauVideo.count>0)
+    if (self.TableauCategorie.count>0)
     {
         self.buttonEdit.enabled=true;
         [self.tableView reloadData];
@@ -64,16 +86,16 @@
         self.editing=false;
         self.buttonEdit.title=@"Edit";
     }
-
+    
 }
 
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    
     [super tableView:tableView numberOfRowsInSection:section];
-
-    if (savvideo.TableauVideo.count>0) {
-        return savvideo.TableauVideo.count;
+    
+    if (self.TableauCategorie.count>0) {
+        return self.TableauCategorie.count;
     }
     else {
         return 0;
@@ -97,33 +119,31 @@
     
     
     
-    if (savvideo.TableauVideo.count>0) {
-        [savvideo.TableauVideo removeObjectAtIndex:indexPath.row];
+    if (self.TableauCategorie.count>0) {
+        [self.TableauCategorie removeObjectAtIndex:indexPath.row];
         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
         
     }
-
     
-    if (savvideo.TableauVideo.count==0) {
-
+    
+    if (self.TableauCategorie.count==0) {
+        
         self.buttonEdit.title=@"Edit";
         self.editing = false;
         self.buttonEdit.enabled = false;
         
     }
-
+    
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-      
-        
+    
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    ModelVideo *model = [savvideo.TableauVideo objectAtIndex:indexPath.row];
-    cell.imageView.image = model.imageVideo;
-    cell.textLabel.text = [NSString stringWithFormat:@"%@%@%@", model.titre , @" " , model.categorie] ;
+    cell.textLabel.text = [self.TableauCategorie objectAtIndex:indexPath.row];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    cell.accessoryType = UITableViewCellAccessoryNone;
+    //cell.accessoryType = UITableViewCellAccessoryCheckmark;
     return cell;
     
     
@@ -132,20 +152,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-   
-    ModelVideo *model = [savvideo.TableauVideo objectAtIndex:indexPath.row];
-    savvideo.url = model.adresseVideo;
-    
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"PlayerSimpleViewController"];
-    [self.navigationController presentViewController:controller animated:NO completion:nil];
-    
-    
+    wSavvideo.categorie = [self.TableauCategorie objectAtIndex:indexPath.row];
+    [self dismissViewControllerAnimated:YES completion:nil];
+
     
 }
-
-
-
 
 
 

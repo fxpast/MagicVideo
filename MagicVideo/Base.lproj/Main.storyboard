@@ -10,16 +10,16 @@
         <scene sceneID="MAm-l0-DQT">
             <objects>
                 <tableViewController title="Sent Memes table" id="4kJ-aW-17N" customClass="TableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" id="b0L-au-bqg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" id="b0L-au-bqg">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="116" id="PHv-E5-fWK">
-                                <rect key="frame" x="0.0" y="92" width="768" height="116"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="71" id="PHv-E5-fWK">
+                                <rect key="frame" x="0.0" y="92" width="768" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PHv-E5-fWK" id="dCN-0u-bYi">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="115"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
@@ -407,10 +407,10 @@
             </objects>
             <point key="canvasLocation" x="3922" y="363"/>
         </scene>
-        <!--Settings Table View Controller-->
+        <!--Category Table View Controller-->
         <scene sceneID="5V0-kc-hpe">
             <objects>
-                <tableViewController id="Kkb-WM-YXz" customClass="SettingsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="Kkb-WM-YXz" customClass="CategoryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="L33-GM-9tr">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -431,6 +431,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="azP-hS-nAu">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="g0A-pg-nJa">
+                            <connections>
+                                <action selector="ActionEdit:" destination="Kkb-WM-YXz" id="3vA-Qq-Lt8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zcv-t4-b9d">
                             <connections>
                                 <segue destination="URd-6T-a4g" kind="popover" popoverAnchorBarButtonItem="Zcv-t4-b9d" id="jGW-st-X2F">
@@ -439,6 +444,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="buttonEdit" destination="g0A-pg-nJa" id="W1b-9K-FKC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iyv-rn-Bhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -456,30 +464,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zc-56-2Rn">
-                                <rect key="frame" x="304" y="54" width="102" height="30"/>
-                                <state key="normal" title="Done"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="78O-a3-fgl">
+                                <rect key="frame" x="135" y="51" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpI-7P-W6g">
+                                <rect key="frame" x="486" y="51" width="141" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="IWd-8f-57N"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="ActionButton:" destination="URd-6T-a4g" eventType="touchUpInside" id="qKO-tl-Fco"/>
+                                    <action selector="ActionButton:" destination="URd-6T-a4g" eventType="touchUpInside" id="5ZQ-vR-ZZb"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJ1-82-Yqh">
-                                <rect key="frame" x="44" y="54" width="221" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gJ1-82-Yqh" firstAttribute="leading" secondItem="aLs-FZ-IQE" secondAttribute="leadingMargin" constant="24" id="CSX-Og-pbz"/>
-                            <constraint firstItem="7zc-56-2Rn" firstAttribute="leading" secondItem="gJ1-82-Yqh" secondAttribute="trailing" constant="39" id="GS4-4q-O0z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7zc-56-2Rn" secondAttribute="trailing" constant="342" id="LTs-NX-CIV"/>
-                            <constraint firstItem="gJ1-82-Yqh" firstAttribute="top" secondItem="qsJ-G9-V9G" secondAttribute="bottom" constant="34" id="Vxb-5Q-9PU"/>
-                            <constraint firstItem="7zc-56-2Rn" firstAttribute="top" secondItem="qsJ-G9-V9G" secondAttribute="bottom" constant="34" id="vDd-D3-we6"/>
+                            <constraint firstItem="UpI-7P-W6g" firstAttribute="leading" secondItem="78O-a3-fgl" secondAttribute="trailing" constant="8" id="0TJ-nX-CeV"/>
+                            <constraint firstItem="UpI-7P-W6g" firstAttribute="top" secondItem="78O-a3-fgl" secondAttribute="top" id="7Fu-hN-VMn"/>
+                            <constraint firstItem="78O-a3-fgl" firstAttribute="leading" secondItem="aLs-FZ-IQE" secondAttribute="leadingMargin" constant="115" id="9rb-Wh-ZkY"/>
+                            <constraint firstItem="78O-a3-fgl" firstAttribute="top" secondItem="qsJ-G9-V9G" secondAttribute="bottom" constant="31" id="lGy-Nj-Nta"/>
+                            <constraint firstAttribute="trailing" secondItem="UpI-7P-W6g" secondAttribute="trailing" constant="141" id="xP7-cs-UrC"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="category" destination="gJ1-82-Yqh" id="cJa-yx-pu5"/>
+                        <outlet property="category" destination="78O-a3-fgl" id="W1O-hS-IFt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixC-9Q-6or" userLabel="First Responder" sceneMemberID="firstResponder"/>

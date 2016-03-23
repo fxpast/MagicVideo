@@ -8,7 +8,7 @@
 @import UIKit;
 
 
-@interface  SettingsTableViewController: UITableViewController
+@interface  CategoryTableViewController: UITableViewController
 
 
 

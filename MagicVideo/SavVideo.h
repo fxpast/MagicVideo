@@ -16,10 +16,11 @@
     NSURL  *url;
     NSString *titre;
     NSString *categorie;
+    BOOL addCateg;
     
 }
 
-
+@property BOOL addCateg;
 @property (strong, nonatomic) NSString *categorie;
 @property (strong, nonatomic) NSString *titre;
 @property (strong, nonatomic) NSURL  *url;

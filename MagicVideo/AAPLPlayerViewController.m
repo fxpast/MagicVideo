@@ -120,6 +120,8 @@
     
 }
 
+
+
 - (IBAction)BTValider:(id)sender {
     
     if (wURL) {

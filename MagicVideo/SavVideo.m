@@ -15,7 +15,7 @@
     
 }
 
-@synthesize TableauVideo, url, titre, categorie;
+@synthesize TableauVideo, url, titre, categorie, addCateg;
 
 
 

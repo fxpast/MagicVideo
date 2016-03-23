@@ -17,6 +17,7 @@
     
 }
 
+
 @property (weak, nonatomic) IBOutlet UITextField *category;
 
 @end
@@ -33,14 +34,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)ActionButton:(id)sender {
     
-    
+
     wSavvideo.categorie = self.category.text;
+    if (wSavvideo.categorie.length > 0) {
+        wSavvideo.addCateg=true;
+        
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }
-
 
 
 @end

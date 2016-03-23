@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB1F67551CA2A84D0008F1B9 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F67541CA2A84D0008F1B9 /* SettingsTableViewController.m */; };
+		DB1F67551CA2A84D0008F1B9 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F67541CA2A84D0008F1B9 /* CategoryTableViewController.m */; };
 		DB1F67581CA2B3280008F1B9 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F67571CA2B3280008F1B9 /* CategoryViewController.m */; };
 		DB1F675B1CA2B70E0008F1B9 /* TitreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F675A1CA2B70E0008F1B9 /* TitreViewController.m */; };
 		DB6011751CA08ECE00DF2E68 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6011741CA08ECE00DF2E68 /* TableViewController.m */; };
@@ -27,8 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DB1F67531CA2A84D0008F1B9 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
-		DB1F67541CA2A84D0008F1B9 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		DB1F67531CA2A84D0008F1B9 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
+		DB1F67541CA2A84D0008F1B9 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
 		DB1F67561CA2B3280008F1B9 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		DB1F67571CA2B3280008F1B9 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		DB1F67591CA2B70E0008F1B9 /* TitreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitreViewController.h; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 				DB1F675A1CA2B70E0008F1B9 /* TitreViewController.m */,
 				DB1F67561CA2B3280008F1B9 /* CategoryViewController.h */,
 				DB1F67571CA2B3280008F1B9 /* CategoryViewController.m */,
-				DB1F67531CA2A84D0008F1B9 /* SettingsTableViewController.h */,
-				DB1F67541CA2A84D0008F1B9 /* SettingsTableViewController.m */,
+				DB1F67531CA2A84D0008F1B9 /* CategoryTableViewController.h */,
+				DB1F67541CA2A84D0008F1B9 /* CategoryTableViewController.m */,
 				DBD9D3781CA1C58500D11EED /* PlayerSimpleViewController.h */,
 				DBD9D3791CA1C58500D11EED /* PlayerSimpleViewController.m */,
 				DBD9D36A1CA1A27E00D11EED /* AAPLPlayerViewController.h */,
@@ -235,7 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB1F67551CA2A84D0008F1B9 /* SettingsTableViewController.m in Sources */,
+				DB1F67551CA2A84D0008F1B9 /* CategoryTableViewController.m in Sources */,
 				DBC9A9EC1CA08CF4002C2CDF /* AppDelegate.m in Sources */,
 				DBD9D37A1CA1C58500D11EED /* PlayerSimpleViewController.m in Sources */,
 				DB6011831CA08F2600DF2E68 /* ModelVideo.m in Sources */,
