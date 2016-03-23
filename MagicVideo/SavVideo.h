@@ -14,10 +14,14 @@
 {
     NSMutableArray *TableauVideo;
     NSURL  *url;
+    NSString *titre;
+    NSString *categorie;
     
 }
 
 
+@property (strong, nonatomic) NSString *categorie;
+@property (strong, nonatomic) NSString *titre;
 @property (strong, nonatomic) NSURL  *url;
 @property (strong, nonatomic) NSMutableArray *TableauVideo;
 

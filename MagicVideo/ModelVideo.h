@@ -13,6 +13,8 @@
 @interface  ModelVideo: NSObject {
     
     NSURL *adresseVideo;
+    NSString *titre;
+    NSString *categorie;
     UIImage *imageVideo;
     
     
@@ -20,7 +22,8 @@
 
 @property (strong, nonatomic) NSURL *adresseVideo;
 @property (strong, nonatomic) UIImage *imageVideo;
-
+@property (strong, nonatomic) NSString *titre;
+@property (strong, nonatomic) NSString *categorie;
 
 
 

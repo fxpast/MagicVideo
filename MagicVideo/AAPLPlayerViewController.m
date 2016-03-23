@@ -139,7 +139,10 @@
         wModelvideo = [[ModelVideo alloc] init];
         wModelvideo.adresseVideo = wURL;
         wModelvideo.imageVideo = thumb;
+        wModelvideo.titre = wSavvideo.titre;
+        wModelvideo.categorie = wSavvideo.categorie;
         [wSavvideo.TableauVideo addObject:wModelvideo];
+        
     }
     
     

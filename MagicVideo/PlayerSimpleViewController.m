@@ -64,7 +64,7 @@
 
 - (void)dismissMe {
     
-    NSLog(@"Popover was dismissed with internal tap");
+    NSLog(@"video was dismissed with internal tap");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

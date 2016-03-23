@@ -120,7 +120,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     ModelVideo *model = [savvideo.TableauVideo objectAtIndex:indexPath.row];
     cell.imageView.image = model.imageVideo;
-    cell.textLabel.text = model.adresseVideo.absoluteString;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@%@%@", model.titre , @" " , model.categorie] ;
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.accessoryType = UITableViewCellAccessoryNone;
     return cell;

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1F67551CA2A84D0008F1B9 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F67541CA2A84D0008F1B9 /* SettingsTableViewController.m */; };
+		DB1F67581CA2B3280008F1B9 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F67571CA2B3280008F1B9 /* CategoryViewController.m */; };
+		DB1F675B1CA2B70E0008F1B9 /* TitreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F675A1CA2B70E0008F1B9 /* TitreViewController.m */; };
 		DB6011751CA08ECE00DF2E68 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6011741CA08ECE00DF2E68 /* TableViewController.m */; };
 		DB6011831CA08F2600DF2E68 /* ModelVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB60117E1CA08F2600DF2E68 /* ModelVideo.m */; };
 		DB6011841CA08F2600DF2E68 /* SavVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6011801CA08F2600DF2E68 /* SavVideo.m */; };
@@ -24,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB1F67531CA2A84D0008F1B9 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		DB1F67541CA2A84D0008F1B9 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		DB1F67561CA2B3280008F1B9 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		DB1F67571CA2B3280008F1B9 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		DB1F67591CA2B70E0008F1B9 /* TitreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitreViewController.h; sourceTree = "<group>"; };
+		DB1F675A1CA2B70E0008F1B9 /* TitreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitreViewController.m; sourceTree = "<group>"; };
 		DB6011741CA08ECE00DF2E68 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		DB6011761CA08EDF00DF2E68 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		DB60117D1CA08F2600DF2E68 /* ModelVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelVideo.h; sourceTree = "<group>"; };
@@ -106,6 +115,12 @@
 		DBD9D3681CA1A24100D11EED /* PlayView */ = {
 			isa = PBXGroup;
 			children = (
+				DB1F67591CA2B70E0008F1B9 /* TitreViewController.h */,
+				DB1F675A1CA2B70E0008F1B9 /* TitreViewController.m */,
+				DB1F67561CA2B3280008F1B9 /* CategoryViewController.h */,
+				DB1F67571CA2B3280008F1B9 /* CategoryViewController.m */,
+				DB1F67531CA2A84D0008F1B9 /* SettingsTableViewController.h */,
+				DB1F67541CA2A84D0008F1B9 /* SettingsTableViewController.m */,
 				DBD9D3781CA1C58500D11EED /* PlayerSimpleViewController.h */,
 				DBD9D3791CA1C58500D11EED /* PlayerSimpleViewController.m */,
 				DBD9D36A1CA1A27E00D11EED /* AAPLPlayerViewController.h */,
@@ -220,14 +235,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB1F67551CA2A84D0008F1B9 /* SettingsTableViewController.m in Sources */,
 				DBC9A9EC1CA08CF4002C2CDF /* AppDelegate.m in Sources */,
 				DBD9D37A1CA1C58500D11EED /* PlayerSimpleViewController.m in Sources */,
 				DB6011831CA08F2600DF2E68 /* ModelVideo.m in Sources */,
 				DBC9A9E91CA08CF4002C2CDF /* main.m in Sources */,
 				DBD9D3731CA1A29700D11EED /* AAPLCameraAppDelegate.m in Sources */,
 				DBC9A9F51CA08CF4002C2CDF /* MagicVideo.xcdatamodeld in Sources */,
+				DB1F675B1CA2B70E0008F1B9 /* TitreViewController.m in Sources */,
 				DBD9D36C1CA1A27E00D11EED /* AAPLPlayerViewController.m in Sources */,
 				DBD9D3741CA1A29700D11EED /* AAPLCameraPreviewView.m in Sources */,
+				DB1F67581CA2B3280008F1B9 /* CategoryViewController.m in Sources */,
 				DB6011841CA08F2600DF2E68 /* SavVideo.m in Sources */,
 				DB6011751CA08ECE00DF2E68 /* TableViewController.m in Sources */,
 				DBD9D3751CA1A29700D11EED /* AAPLCameraViewController.m in Sources */,

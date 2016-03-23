@@ -14,7 +14,7 @@
 }
 
 
-@synthesize adresseVideo, imageVideo;
+@synthesize adresseVideo, imageVideo, titre, categorie;
 
 
 @end
