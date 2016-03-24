@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="EvD-SS-D9b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="EvD-SS-D9b">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -51,6 +51,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VDS-LQ-MLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3005" y="-765"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="04X-Yf-yeL">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="e3a-V9-Hdq" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZZS-Qy-2SV"/>
+                        <viewControllerLayoutGuide type="bottom" id="PWV-zs-gDp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hYZ-fq-nPM">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uMV-tI-ehS">
+                                <rect key="frame" x="182" y="244" width="417" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R76-RZ-BK3">
+                                <rect key="frame" x="296" y="77" width="177" height="137"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne1-88-Oxe">
+                                <rect key="frame" x="182" y="312" width="417" height="30"/>
+                                <state key="normal" title="Catégorie"/>
+                                <connections>
+                                    <segue destination="XQl-3K-B4V" kind="popover" identifier="fromDetailCategorie" popoverAnchorView="Ne1-88-Oxe" id="hgt-Td-uiE">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wh0-Lc-tgs">
+                                <rect key="frame" x="182" y="576" width="417" height="30"/>
+                                <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="ActionButton:" destination="e3a-V9-Hdq" eventType="touchUpInside" id="0bJ-mQ-9VU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaG-nG-76Q">
+                                <rect key="frame" x="182" y="421" width="183" height="30"/>
+                                <state key="normal" title="Activer au demarrage"/>
+                                <connections>
+                                    <action selector="ActionActiverDemarrage:" destination="e3a-V9-Hdq" eventType="touchUpInside" id="XAK-SB-034"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyw-k6-sEa">
+                                <rect key="frame" x="437" y="421" width="173" height="30"/>
+                                <state key="normal" title="Desactiver au demarrage"/>
+                                <connections>
+                                    <action selector="ActionDesactiverDemarrage:" destination="e3a-V9-Hdq" eventType="touchUpInside" id="FVz-CS-Fdi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="OK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHe-EF-CCi">
+                                <rect key="frame" x="346" y="470" width="79" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.52135220859999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zaG-nG-76Q" firstAttribute="leading" secondItem="hYZ-fq-nPM" secondAttribute="leadingMargin" constant="162" id="BiP-fG-5Ue"/>
+                            <constraint firstItem="WHe-EF-CCi" firstAttribute="leading" secondItem="hYZ-fq-nPM" secondAttribute="leadingMargin" constant="326" id="CbG-H1-ek6"/>
+                            <constraint firstItem="wh0-Lc-tgs" firstAttribute="leading" secondItem="hYZ-fq-nPM" secondAttribute="leadingMargin" constant="162" id="GRe-p0-q7D"/>
+                            <constraint firstItem="Ne1-88-Oxe" firstAttribute="leading" secondItem="hYZ-fq-nPM" secondAttribute="leadingMargin" constant="162" id="Jny-iI-VWr"/>
+                            <constraint firstItem="Ne1-88-Oxe" firstAttribute="top" secondItem="uMV-tI-ehS" secondAttribute="bottom" constant="38" id="R9v-fg-fh1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WHe-EF-CCi" secondAttribute="trailing" constant="323" id="TpE-P9-ZfV"/>
+                            <constraint firstItem="R76-RZ-BK3" firstAttribute="leading" secondItem="hYZ-fq-nPM" secondAttribute="leadingMargin" constant="276" id="VTI-dO-vq2"/>
+                            <constraint firstItem="Nyw-k6-sEa" firstAttribute="top" secondItem="Ne1-88-Oxe" secondAttribute="bottom" constant="79" id="WRY-4P-Z7Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nyw-k6-sEa" secondAttribute="trailing" constant="138" id="ZDx-Yd-SfH"/>
+                            <constraint firstItem="R76-RZ-BK3" firstAttribute="top" secondItem="ZZS-Qy-2SV" secondAttribute="bottom" constant="57" id="bo7-de-C6N"/>
+                            <constraint firstItem="WHe-EF-CCi" firstAttribute="leading" secondItem="zaG-nG-76Q" secondAttribute="trailing" constant="-19" id="d1u-vB-eAa"/>
+                            <constraint firstItem="Nyw-k6-sEa" firstAttribute="leading" secondItem="zaG-nG-76Q" secondAttribute="trailing" constant="72" id="ezR-Iq-kui"/>
+                            <constraint firstItem="uMV-tI-ehS" firstAttribute="leading" secondItem="hYZ-fq-nPM" secondAttribute="leadingMargin" constant="162" id="lsE-uj-XiG"/>
+                            <constraint firstItem="PWV-zs-gDp" firstAttribute="top" secondItem="wh0-Lc-tgs" secondAttribute="bottom" constant="418" id="ngz-FC-a6S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uMV-tI-ehS" secondAttribute="trailing" constant="149" id="nue-G8-zYd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wh0-Lc-tgs" secondAttribute="trailing" constant="149" id="pdP-rb-8Jg"/>
+                            <constraint firstItem="Nyw-k6-sEa" firstAttribute="leading" secondItem="WHe-EF-CCi" secondAttribute="trailing" constant="12" id="psZ-VK-F0a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ne1-88-Oxe" secondAttribute="trailing" constant="149" id="qbB-va-M4h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R76-RZ-BK3" secondAttribute="trailing" constant="275" id="ruR-Mi-xub"/>
+                            <constraint firstItem="zaG-nG-76Q" firstAttribute="top" secondItem="Ne1-88-Oxe" secondAttribute="bottom" constant="79" id="uBU-pg-KRu"/>
+                            <constraint firstItem="uMV-tI-ehS" firstAttribute="top" secondItem="R76-RZ-BK3" secondAttribute="bottom" constant="30" id="yq5-1h-JcS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="R76-RZ-BK3" id="RLo-FG-XKI"/>
+                        <outlet property="okButton" destination="WHe-EF-CCi" id="mN8-J7-KI8"/>
+                        <outlet property="titre" destination="uMV-tI-ehS" id="xbs-wc-BF1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FfF-kh-96Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4756" y="1502"/>
         </scene>
         <!--Liste Video-->
         <scene sceneID="AaU-27-K7A">
@@ -199,7 +291,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="7248" y="-1141"/>
+            <point key="canvasLocation" x="8808" y="-137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="26n-Sq-CkN">
@@ -224,7 +316,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3A-fk-qFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6227" y="-1117"/>
+            <point key="canvasLocation" x="7603" y="-109"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="7pD-yD-25V">
@@ -305,7 +397,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ucO-vo-Mp5"/>
                                     <barButtonItem title="Title" id="TML-lB-gyi">
                                         <connections>
-                                            <segue destination="Xka-IB-x7e" kind="popover" popoverAnchorBarButtonItem="TML-lB-gyi" id="u4a-dr-hhw">
+                                            <segue destination="Xka-IB-x7e" kind="popover" identifier="fromPlayerTitre" popoverAnchorBarButtonItem="TML-lB-gyi" id="u4a-dr-hhw">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
@@ -313,7 +405,7 @@
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="1q3-s3-DZJ"/>
                                     <barButtonItem title="Category" id="cig-nJ-6kK">
                                         <connections>
-                                            <segue destination="XQl-3K-B4V" kind="popover" popoverAnchorBarButtonItem="cig-nJ-6kK" id="JkJ-ea-PYS">
+                                            <segue destination="XQl-3K-B4V" kind="popover" identifier="fromPlayer" popoverAnchorBarButtonItem="cig-nJ-6kK" id="JkJ-ea-PYS">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
@@ -327,7 +419,7 @@
                                     <barButtonItem width="45" style="plain" systemItem="fixedSpace" id="OL1-YT-9rk"/>
                                     <barButtonItem title="Item" systemItem="camera" id="Zby-WH-x5N">
                                         <connections>
-                                            <segue destination="hkg-Ku-U0q" kind="modal" identifier="fromplayer" modalTransitionStyle="crossDissolve" id="Csp-k6-rfA"/>
+                                            <segue destination="hkg-Ku-U0q" kind="modal" identifier="fromPlayerCategory" modalTransitionStyle="crossDissolve" id="Csp-k6-rfA"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -359,6 +451,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cameraButton" destination="Zby-WH-x5N" id="tn7-dL-mha"/>
                         <outlet property="doneButton" destination="glz-Mp-sxv" id="4pw-D7-8cX"/>
                         <outlet property="libraryButton" destination="zeN-Zg-K8S" id="AUh-yI-hxh"/>
                         <outlet property="locationOverlayLabel" destination="hIS-P3-Pfj" id="as4-pD-kST"/>
@@ -369,7 +462,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhZ-pQ-Syu" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5144" y="-1193"/>
+            <point key="canvasLocation" x="5392" y="-1173"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nK6-CX-aMv">
@@ -450,12 +543,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iyv-rn-Bhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7894" y="999"/>
+            <point key="canvasLocation" x="7122" y="1027"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="647-sp-I7F">
             <objects>
-                <viewController id="URd-6T-a4g" customClass="CategoryViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryViewController" id="URd-6T-a4g" customClass="CategoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qsJ-G9-V9G"/>
                         <viewControllerLayoutGuide type="bottom" id="tSg-T5-74c"/>
@@ -474,7 +567,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="141" id="IWd-8f-57N"/>
                                 </constraints>
-                                <state key="normal" title="Add"/>
+                                <state key="normal" title="valider"/>
                                 <connections>
                                     <action selector="ActionButton:" destination="URd-6T-a4g" eventType="touchUpInside" id="5ZQ-vR-ZZb"/>
                                 </connections>
@@ -495,7 +588,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixC-9Q-6or" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8883" y="1023"/>
+            <point key="canvasLocation" x="8111" y="1051"/>
         </scene>
         <!--Titre View Controller-->
         <scene sceneID="dL9-oX-FWk">
@@ -509,14 +602,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1y-8b-uhP">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1y-8b-uhP">
                                 <rect key="frame" x="33" y="46" width="267" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4V-rB-N68">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4V-rB-N68">
                                 <rect key="frame" x="342" y="46" width="37" height="30"/>
-                                <state key="normal" title="Done"/>
+                                <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="ActionButton:" destination="URd-6T-a4g" eventType="touchUpInside" id="8Xx-UF-58J"/>
                                     <action selector="ActionButton:" destination="Xka-IB-x7e" eventType="touchUpInside" id="hxq-hs-JiM"/>
@@ -556,7 +649,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cb8-I9-cdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6914" y="999"/>
+            <point key="canvasLocation" x="6142" y="1027"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hgt-Td-uiE"/>
+    </inferredMetricsTieBreakers>
 </document>

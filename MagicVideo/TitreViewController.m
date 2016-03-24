@@ -35,6 +35,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) viewDidAppear:(BOOL)animated {
+    
+    
+    [super viewDidAppear:animated];
+    
+    self.titre.text = wSavvideo.titre;
+}
+
 - (IBAction)ActionButton:(id)sender {
     
     wSavvideo.titre = self.titre.text;

@@ -11,11 +11,9 @@
 
 
 @implementation SavVideo
-{
-    
-}
 
-@synthesize TableauVideo, url, titre, categorie, addCateg;
+
+@synthesize url, titre, id_categ, categorie, addVideo, updatVideo, addCateg, updatCateg, image;
 
 
 
@@ -26,7 +24,6 @@
     if (Zinstance == nil)
     {
         Zinstance = [[self alloc] init];
-        Zinstance.TableauVideo =[[NSMutableArray alloc] init];
         
     }
     

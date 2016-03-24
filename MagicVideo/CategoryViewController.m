@@ -8,12 +8,13 @@
 
 #import "CategoryViewController.h"
 #import "SavVideo.h"
-
+#import "DataSettings.h"
 
 @interface CategoryViewController ()
 {
     
     SavVideo *wSavvideo;
+    DataSettings *WVarPermnt;
     
 }
 
@@ -34,12 +35,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) viewDidAppear:(BOOL)animated {
+    
+    
+    
+    [super viewDidAppear:animated];
+    self.category.text = wSavvideo.categorie;
+}
 
 - (IBAction)ActionButton:(id)sender {
     
 
-    wSavvideo.categorie = self.category.text;
-    if (wSavvideo.categorie.length > 0) {
+    
+    if (self.category.text.length > 0) {
+        wSavvideo.categorie = self.category.text;
+        wSavvideo.id_categ = WVarPermnt.id_categ.intValue + 1;
+        WVarPermnt.id_categ =[NSString stringWithFormat:@"%d", wSavvideo.id_categ];
         wSavvideo.addCateg=true;
         
     }

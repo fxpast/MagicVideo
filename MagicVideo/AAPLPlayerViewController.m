@@ -10,7 +10,6 @@
 
 
 #import "SavVideo.h"
-#import "ModelVideo.h"
 #import "AAPLPlayerViewController.h"
 
 @interface AAPLImagePickerController : UIImagePickerController
@@ -33,11 +32,11 @@
 {
     
     SavVideo *wSavvideo;
-    ModelVideo *wModelvideo;
     NSURL *wURL;
     
 }
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic, weak) IBOutlet UIView *playerView;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *playButton;
@@ -84,6 +83,13 @@
     wSavvideo = [SavVideo singleton];
     
 }
+
+-(void) viewWillAppear:(BOOL)animated{
+
+    [super viewWillAppear:animated];
+    self.cameraButton.enabled = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+}
+
 
 -(void)viewWillDisappear:(BOOL)animated
 {
@@ -137,13 +143,9 @@
         UIImage *thumb = [[UIImage alloc] initWithCGImage:image];
         CGImageRelease(image);
         
-        
-        wModelvideo = [[ModelVideo alloc] init];
-        wModelvideo.adresseVideo = wURL;
-        wModelvideo.imageVideo = thumb;
-        wModelvideo.titre = wSavvideo.titre;
-        wModelvideo.categorie = wSavvideo.categorie;
-        [wSavvideo.TableauVideo addObject:wModelvideo];
+        wSavvideo.image = thumb;
+        wSavvideo.url = wURL;
+        wSavvideo.addVideo = true;
         
     }
     

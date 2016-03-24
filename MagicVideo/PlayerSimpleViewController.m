@@ -83,6 +83,7 @@
 
 -(void) viewDidAppear:(BOOL)animated {
     
+    [super viewDidAppear:animated];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:self.player.currentItem];
     [self setupPlaybackForURL:wSavvideo.url];

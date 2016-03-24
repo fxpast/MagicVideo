@@ -7,24 +7,18 @@
 //
 
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
 
-@interface  ModelVideo: NSObject {
-    
-    NSURL *adresseVideo;
-    NSString *titre;
-    NSString *categorie;
-    UIImage *imageVideo;
-    
-    
-}
+@import Foundation;
+@import CoreData;
+@import UIKit;
 
-@property (strong, nonatomic) NSURL *adresseVideo;
+@interface ModelVideo : NSManagedObject
+
+
+@property  int id_groupe;
+@property (strong, nonatomic) NSString *nom_groupe;
+@property (strong, nonatomic) NSString *adresseVideo;
 @property (strong, nonatomic) UIImage *imageVideo;
 @property (strong, nonatomic) NSString *titre;
-@property (strong, nonatomic) NSString *categorie;
-
-
 
 @end

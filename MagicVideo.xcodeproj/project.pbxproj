@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0620E11CA303C5009AA161 /* ModelCategorie.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0620DF1CA303C5009AA161 /* ModelCategorie.m */; };
+		DB0620E41CA344E4009AA161 /* APLCoreDataStackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0620E31CA344E4009AA161 /* APLCoreDataStackManager.m */; };
+		DB0620E71CA3FA05009AA161 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0620E61CA3FA05009AA161 /* DetailViewController.m */; };
 		DB1F67551CA2A84D0008F1B9 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F67541CA2A84D0008F1B9 /* CategoryTableViewController.m */; };
 		DB1F67581CA2B3280008F1B9 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F67571CA2B3280008F1B9 /* CategoryViewController.m */; };
 		DB1F675B1CA2B70E0008F1B9 /* TitreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F675A1CA2B70E0008F1B9 /* TitreViewController.m */; };
 		DB6011751CA08ECE00DF2E68 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6011741CA08ECE00DF2E68 /* TableViewController.m */; };
 		DB6011831CA08F2600DF2E68 /* ModelVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB60117E1CA08F2600DF2E68 /* ModelVideo.m */; };
 		DB6011841CA08F2600DF2E68 /* SavVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6011801CA08F2600DF2E68 /* SavVideo.m */; };
+		DBAA1CBC1CA415A0009818CE /* parametres.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBAA1CBB1CA415A0009818CE /* parametres.plist */; };
+		DBAA1CBF1CA416A9009818CE /* DataSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAA1CBE1CA416A9009818CE /* DataSettings.m */; };
 		DBC9A9E91CA08CF4002C2CDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9A9E81CA08CF4002C2CDF /* main.m */; };
 		DBC9A9EC1CA08CF4002C2CDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9A9EB1CA08CF4002C2CDF /* AppDelegate.m */; };
 		DBC9A9F21CA08CF4002C2CDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC9A9F01CA08CF4002C2CDF /* Main.storyboard */; };
-		DBC9A9F51CA08CF4002C2CDF /* MagicVideo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBC9A9F31CA08CF4002C2CDF /* MagicVideo.xcdatamodeld */; };
 		DBC9A9F71CA08CF4002C2CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC9A9F61CA08CF4002C2CDF /* Assets.xcassets */; };
 		DBC9A9FA1CA08CF4002C2CDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC9A9F81CA08CF4002C2CDF /* LaunchScreen.storyboard */; };
 		DBD9D36C1CA1A27E00D11EED /* AAPLPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9D36B1CA1A27E00D11EED /* AAPLPlayerViewController.m */; };
@@ -27,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB0620DF1CA303C5009AA161 /* ModelCategorie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCategorie.m; sourceTree = "<group>"; };
+		DB0620E01CA303C5009AA161 /* ModelCategorie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelCategorie.h; sourceTree = "<group>"; };
+		DB0620E21CA344E4009AA161 /* APLCoreDataStackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLCoreDataStackManager.h; sourceTree = "<group>"; };
+		DB0620E31CA344E4009AA161 /* APLCoreDataStackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLCoreDataStackManager.m; sourceTree = "<group>"; };
+		DB0620E51CA3FA05009AA161 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		DB0620E61CA3FA05009AA161 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		DB1F67531CA2A84D0008F1B9 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
 		DB1F67541CA2A84D0008F1B9 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
 		DB1F67561CA2B3280008F1B9 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
@@ -39,12 +49,14 @@
 		DB60117E1CA08F2600DF2E68 /* ModelVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelVideo.m; sourceTree = "<group>"; };
 		DB60117F1CA08F2600DF2E68 /* SavVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavVideo.h; sourceTree = "<group>"; };
 		DB6011801CA08F2600DF2E68 /* SavVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavVideo.m; sourceTree = "<group>"; };
+		DBAA1CBB1CA415A0009818CE /* parametres.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parametres.plist; sourceTree = "<group>"; };
+		DBAA1CBD1CA416A9009818CE /* DataSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSettings.h; sourceTree = "<group>"; };
+		DBAA1CBE1CA416A9009818CE /* DataSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSettings.m; sourceTree = "<group>"; };
 		DBC9A9E41CA08CF4002C2CDF /* MagicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC9A9E81CA08CF4002C2CDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBC9A9EA1CA08CF4002C2CDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBC9A9EB1CA08CF4002C2CDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DBC9A9F11CA08CF4002C2CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DBC9A9F41CA08CF4002C2CDF /* MagicVideo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MagicVideo.xcdatamodel; sourceTree = "<group>"; };
 		DBC9A9F61CA08CF4002C2CDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBC9A9F91CA08CF4002C2CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBC9A9FB1CA08CF4002C2CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,7 +102,7 @@
 		DBC9A9E61CA08CF4002C2CDF /* MagicVideo */ = {
 			isa = PBXGroup;
 			children = (
-				DBD9D3771CA1BBD300D11EED /* Delegate */,
+				DBD9D3771CA1BBD300D11EED /* Base */,
 				DBD9D3681CA1A24100D11EED /* PlayView */,
 				DBD9D3691CA1A25B00D11EED /* CameraView */,
 				DBD9D3761CA1A38700D11EED /* Model */,
@@ -98,7 +110,7 @@
 				DBC9A9F61CA08CF4002C2CDF /* Assets.xcassets */,
 				DBC9A9F81CA08CF4002C2CDF /* LaunchScreen.storyboard */,
 				DBC9A9FB1CA08CF4002C2CDF /* Info.plist */,
-				DBC9A9F31CA08CF4002C2CDF /* MagicVideo.xcdatamodeld */,
+				DBAA1CBB1CA415A0009818CE /* parametres.plist */,
 				DBC9A9E71CA08CF4002C2CDF /* Supporting Files */,
 			);
 			path = MagicVideo;
@@ -145,23 +157,31 @@
 		DBD9D3761CA1A38700D11EED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DBAA1CBD1CA416A9009818CE /* DataSettings.h */,
+				DBAA1CBE1CA416A9009818CE /* DataSettings.m */,
+				DB0620E21CA344E4009AA161 /* APLCoreDataStackManager.h */,
+				DB0620E31CA344E4009AA161 /* APLCoreDataStackManager.m */,
 				DB60117D1CA08F2600DF2E68 /* ModelVideo.h */,
 				DB60117E1CA08F2600DF2E68 /* ModelVideo.m */,
+				DB0620E01CA303C5009AA161 /* ModelCategorie.h */,
+				DB0620DF1CA303C5009AA161 /* ModelCategorie.m */,
 				DB60117F1CA08F2600DF2E68 /* SavVideo.h */,
 				DB6011801CA08F2600DF2E68 /* SavVideo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		DBD9D3771CA1BBD300D11EED /* Delegate */ = {
+		DBD9D3771CA1BBD300D11EED /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				DB0620E51CA3FA05009AA161 /* DetailViewController.h */,
+				DB0620E61CA3FA05009AA161 /* DetailViewController.m */,
 				DBC9A9EA1CA08CF4002C2CDF /* AppDelegate.h */,
 				DBC9A9EB1CA08CF4002C2CDF /* AppDelegate.m */,
 				DB6011761CA08EDF00DF2E68 /* TableViewController.h */,
 				DB6011741CA08ECE00DF2E68 /* TableViewController.m */,
 			);
-			name = Delegate;
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +244,7 @@
 			files = (
 				DBC9A9FA1CA08CF4002C2CDF /* LaunchScreen.storyboard in Resources */,
 				DBC9A9F71CA08CF4002C2CDF /* Assets.xcassets in Resources */,
+				DBAA1CBC1CA415A0009818CE /* parametres.plist in Resources */,
 				DBC9A9F21CA08CF4002C2CDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,16 +257,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB1F67551CA2A84D0008F1B9 /* CategoryTableViewController.m in Sources */,
+				DB0620E11CA303C5009AA161 /* ModelCategorie.m in Sources */,
+				DB0620E71CA3FA05009AA161 /* DetailViewController.m in Sources */,
 				DBC9A9EC1CA08CF4002C2CDF /* AppDelegate.m in Sources */,
 				DBD9D37A1CA1C58500D11EED /* PlayerSimpleViewController.m in Sources */,
 				DB6011831CA08F2600DF2E68 /* ModelVideo.m in Sources */,
+				DB0620E41CA344E4009AA161 /* APLCoreDataStackManager.m in Sources */,
 				DBC9A9E91CA08CF4002C2CDF /* main.m in Sources */,
 				DBD9D3731CA1A29700D11EED /* AAPLCameraAppDelegate.m in Sources */,
-				DBC9A9F51CA08CF4002C2CDF /* MagicVideo.xcdatamodeld in Sources */,
 				DB1F675B1CA2B70E0008F1B9 /* TitreViewController.m in Sources */,
 				DBD9D36C1CA1A27E00D11EED /* AAPLPlayerViewController.m in Sources */,
 				DBD9D3741CA1A29700D11EED /* AAPLCameraPreviewView.m in Sources */,
 				DB1F67581CA2B3280008F1B9 /* CategoryViewController.m in Sources */,
+				DBAA1CBF1CA416A9009818CE /* DataSettings.m in Sources */,
 				DB6011841CA08F2600DF2E68 /* SavVideo.m in Sources */,
 				DB6011751CA08ECE00DF2E68 /* TableViewController.m in Sources */,
 				DBD9D3751CA1A29700D11EED /* AAPLCameraViewController.m in Sources */,
@@ -362,6 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MagicVideo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prv.MagicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -375,6 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MagicVideo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prv.MagicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -403,19 +429,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DBC9A9F31CA08CF4002C2CDF /* MagicVideo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DBC9A9F41CA08CF4002C2CDF /* MagicVideo.xcdatamodel */,
-			);
-			currentVersion = DBC9A9F41CA08CF4002C2CDF /* MagicVideo.xcdatamodel */;
-			path = MagicVideo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DBC9A9DC1CA08CF4002C2CDF /* Project object */;
 }

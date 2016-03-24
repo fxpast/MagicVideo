@@ -14,7 +14,12 @@
 }
 
 
-@synthesize adresseVideo, imageVideo, titre, categorie;
+@dynamic adresseVideo;
+@dynamic imageVideo;
+@dynamic titre;
+@dynamic nom_groupe;
+@dynamic id_groupe;
+
 
 
 @end
