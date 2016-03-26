@@ -63,6 +63,11 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissMe)];
     [self.view addGestureRecognizer:tap];
     
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(dismissMe)
+                                                name:UIApplicationDidEnterBackgroundNotification
+                                              object:nil];
+    
 }
 
 
