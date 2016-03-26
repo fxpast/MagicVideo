@@ -300,7 +300,7 @@ typedef NS_ENUM( NSInteger, AVMetadataRecordPlaySetupResult ) {
 
 - (void)removeObservers
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	 
 
 	[self.session removeObserver:self forKeyPath:@"running" context:SessionRunningContext];
 }
