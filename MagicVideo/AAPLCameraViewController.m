@@ -4,11 +4,11 @@
 	Camera view controller.
 */
 
-@import AVFoundation;
-@import CoreLocation;
-@import CoreMedia;
-@import Photos;
 
+#import <CoreMedia/CoreMedia.h>
+#import <Photos/Photos.h>
+#import <AVFoundation/AVFoundation.h>
+#import <CoreLocation/CoreLocation.h>
 #import "AAPLCameraViewController.h"
 #import "AAPLCameraPreviewView.h"
 

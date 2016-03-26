@@ -4,7 +4,7 @@
 	Camera preview view.
 */
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @class AVCaptureSession;
 

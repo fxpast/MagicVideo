@@ -13,7 +13,7 @@
 @implementation SavVideo
 
 
-@synthesize url, titre, id_categ, categorie, addVideo, updatVideo, addCateg, updatCateg, image;
+@synthesize url, addVideo, image;
 
 
 

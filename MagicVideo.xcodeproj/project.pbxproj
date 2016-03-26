@@ -7,193 +7,231 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB0620E11CA303C5009AA161 /* ModelCategorie.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0620DF1CA303C5009AA161 /* ModelCategorie.m */; };
-		DB0620E41CA344E4009AA161 /* APLCoreDataStackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0620E31CA344E4009AA161 /* APLCoreDataStackManager.m */; };
-		DB0620E71CA3FA05009AA161 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0620E61CA3FA05009AA161 /* DetailViewController.m */; };
-		DB1F67551CA2A84D0008F1B9 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F67541CA2A84D0008F1B9 /* CategoryTableViewController.m */; };
-		DB1F67581CA2B3280008F1B9 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F67571CA2B3280008F1B9 /* CategoryViewController.m */; };
-		DB1F675B1CA2B70E0008F1B9 /* TitreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1F675A1CA2B70E0008F1B9 /* TitreViewController.m */; };
-		DB6011751CA08ECE00DF2E68 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6011741CA08ECE00DF2E68 /* TableViewController.m */; };
-		DB6011831CA08F2600DF2E68 /* ModelVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB60117E1CA08F2600DF2E68 /* ModelVideo.m */; };
-		DB6011841CA08F2600DF2E68 /* SavVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6011801CA08F2600DF2E68 /* SavVideo.m */; };
-		DBAA1CBC1CA415A0009818CE /* parametres.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBAA1CBB1CA415A0009818CE /* parametres.plist */; };
-		DBAA1CBF1CA416A9009818CE /* DataSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAA1CBE1CA416A9009818CE /* DataSettings.m */; };
-		DBC9A9E91CA08CF4002C2CDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9A9E81CA08CF4002C2CDF /* main.m */; };
-		DBC9A9EC1CA08CF4002C2CDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9A9EB1CA08CF4002C2CDF /* AppDelegate.m */; };
-		DBC9A9F21CA08CF4002C2CDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC9A9F01CA08CF4002C2CDF /* Main.storyboard */; };
-		DBC9A9F71CA08CF4002C2CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC9A9F61CA08CF4002C2CDF /* Assets.xcassets */; };
-		DBC9A9FA1CA08CF4002C2CDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC9A9F81CA08CF4002C2CDF /* LaunchScreen.storyboard */; };
-		DBD9D36C1CA1A27E00D11EED /* AAPLPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9D36B1CA1A27E00D11EED /* AAPLPlayerViewController.m */; };
-		DBD9D3731CA1A29700D11EED /* AAPLCameraAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9D36E1CA1A29700D11EED /* AAPLCameraAppDelegate.m */; };
-		DBD9D3741CA1A29700D11EED /* AAPLCameraPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9D3701CA1A29700D11EED /* AAPLCameraPreviewView.m */; };
-		DBD9D3751CA1A29700D11EED /* AAPLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9D3721CA1A29700D11EED /* AAPLCameraViewController.m */; };
-		DBD9D37A1CA1C58500D11EED /* PlayerSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9D3791CA1C58500D11EED /* PlayerSimpleViewController.m */; };
+		DB9B222A1CA6766600AFBF07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B22291CA6766600AFBF07 /* main.m */; };
+		DB9B22331CA6766700AFBF07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9B22311CA6766700AFBF07 /* Main.storyboard */; };
+		DB9B22361CA6766700AFBF07 /* MagicVideo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB9B22341CA6766700AFBF07 /* MagicVideo.xcdatamodeld */; };
+		DB9B22381CA6766700AFBF07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9B22371CA6766700AFBF07 /* Assets.xcassets */; };
+		DB9B224C1CA677C000AFBF07 /* AAPLCameraAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B22471CA677C000AFBF07 /* AAPLCameraAppDelegate.m */; };
+		DB9B224D1CA677C000AFBF07 /* AAPLCameraPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B22491CA677C000AFBF07 /* AAPLCameraPreviewView.m */; };
+		DB9B224E1CA677C000AFBF07 /* AAPLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B224B1CA677C000AFBF07 /* AAPLCameraViewController.m */; };
+		DB9B22571CA6781200AFBF07 /* AAPLPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B22501CA6781200AFBF07 /* AAPLPlayerViewController.m */; };
+		DB9B22581CA6781200AFBF07 /* APLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B22521CA6781200AFBF07 /* APLAppDelegate.m */; };
+		DB9B22591CA6781200AFBF07 /* APLEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B22541CA6781200AFBF07 /* APLEventsTableViewController.m */; };
+		DB9B225A1CA6781200AFBF07 /* APLTagSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B22561CA6781200AFBF07 /* APLTagSelectionController.m */; };
+		DB9B225D1CA6781C00AFBF07 /* PlayerSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B225C1CA6781C00AFBF07 /* PlayerSimpleViewController.m */; };
+		DB9B22661CA6787500AFBF07 /* APLEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B22601CA6787500AFBF07 /* APLEvent.m */; };
+		DB9B22671CA6787500AFBF07 /* SavVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B22611CA6787500AFBF07 /* SavVideo.m */; };
+		DB9B22681CA6787500AFBF07 /* APLTag.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B22621CA6787500AFBF07 /* APLTag.m */; };
+		DB9B22691CA6787500AFBF07 /* DataSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B22641CA6787500AFBF07 /* DataSettings.m */; };
+		DB9B226E1CA678B400AFBF07 /* APLEditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B226C1CA678B400AFBF07 /* APLEditableTableViewCell.m */; };
+		DB9B226F1CA678B400AFBF07 /* APLEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B226D1CA678B400AFBF07 /* APLEventTableViewCell.m */; };
+		DB9B22711CA6797200AFBF07 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9B22701CA6797200AFBF07 /* Default-568h@2x.png */; };
+		DB9B22771CA6799000AFBF07 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9B22741CA6799000AFBF07 /* Default.png */; };
+		DB9B22781CA6799000AFBF07 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9B22751CA6799000AFBF07 /* Default@2x.png */; };
+		DB9B22791CA6799000AFBF07 /* parametres.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB9B22761CA6799000AFBF07 /* parametres.plist */; };
+		DB9B227B1CA67A5D00AFBF07 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9B227A1CA67A5D00AFBF07 /* CoreMedia.framework */; };
+		DB9B227D1CA67A7500AFBF07 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9B227C1CA67A7500AFBF07 /* Photos.framework */; };
+		DB9B22801CA67A7E00AFBF07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9B227E1CA67A7E00AFBF07 /* AVFoundation.framework */; };
+		DB9B22831CA67AC700AFBF07 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9B22821CA67AC700AFBF07 /* CoreLocation.framework */; };
+		DB9B22851CA67AD800AFBF07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9B22841CA67AD800AFBF07 /* CoreGraphics.framework */; };
+		DB9B22871CA67AEE00AFBF07 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9B22861CA67AEE00AFBF07 /* CoreData.framework */; };
+		DB9B22891CA67B2F00AFBF07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9B22881CA67B2F00AFBF07 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DB0620DF1CA303C5009AA161 /* ModelCategorie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCategorie.m; sourceTree = "<group>"; };
-		DB0620E01CA303C5009AA161 /* ModelCategorie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelCategorie.h; sourceTree = "<group>"; };
-		DB0620E21CA344E4009AA161 /* APLCoreDataStackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLCoreDataStackManager.h; sourceTree = "<group>"; };
-		DB0620E31CA344E4009AA161 /* APLCoreDataStackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLCoreDataStackManager.m; sourceTree = "<group>"; };
-		DB0620E51CA3FA05009AA161 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		DB0620E61CA3FA05009AA161 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		DB1F67531CA2A84D0008F1B9 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
-		DB1F67541CA2A84D0008F1B9 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
-		DB1F67561CA2B3280008F1B9 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
-		DB1F67571CA2B3280008F1B9 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
-		DB1F67591CA2B70E0008F1B9 /* TitreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitreViewController.h; sourceTree = "<group>"; };
-		DB1F675A1CA2B70E0008F1B9 /* TitreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitreViewController.m; sourceTree = "<group>"; };
-		DB6011741CA08ECE00DF2E68 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		DB6011761CA08EDF00DF2E68 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		DB60117D1CA08F2600DF2E68 /* ModelVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelVideo.h; sourceTree = "<group>"; };
-		DB60117E1CA08F2600DF2E68 /* ModelVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelVideo.m; sourceTree = "<group>"; };
-		DB60117F1CA08F2600DF2E68 /* SavVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavVideo.h; sourceTree = "<group>"; };
-		DB6011801CA08F2600DF2E68 /* SavVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavVideo.m; sourceTree = "<group>"; };
-		DBAA1CBB1CA415A0009818CE /* parametres.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parametres.plist; sourceTree = "<group>"; };
-		DBAA1CBD1CA416A9009818CE /* DataSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSettings.h; sourceTree = "<group>"; };
-		DBAA1CBE1CA416A9009818CE /* DataSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSettings.m; sourceTree = "<group>"; };
-		DBC9A9E41CA08CF4002C2CDF /* MagicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBC9A9E81CA08CF4002C2CDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DBC9A9EA1CA08CF4002C2CDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DBC9A9EB1CA08CF4002C2CDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DBC9A9F11CA08CF4002C2CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DBC9A9F61CA08CF4002C2CDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DBC9A9F91CA08CF4002C2CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DBC9A9FB1CA08CF4002C2CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBD9D36A1CA1A27E00D11EED /* AAPLPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLPlayerViewController.h; sourceTree = "<group>"; };
-		DBD9D36B1CA1A27E00D11EED /* AAPLPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLPlayerViewController.m; sourceTree = "<group>"; };
-		DBD9D36D1CA1A29700D11EED /* AAPLCameraAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraAppDelegate.h; sourceTree = "<group>"; };
-		DBD9D36E1CA1A29700D11EED /* AAPLCameraAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCameraAppDelegate.m; sourceTree = "<group>"; };
-		DBD9D36F1CA1A29700D11EED /* AAPLCameraPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraPreviewView.h; sourceTree = "<group>"; };
-		DBD9D3701CA1A29700D11EED /* AAPLCameraPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCameraPreviewView.m; sourceTree = "<group>"; };
-		DBD9D3711CA1A29700D11EED /* AAPLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraViewController.h; sourceTree = "<group>"; };
-		DBD9D3721CA1A29700D11EED /* AAPLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCameraViewController.m; sourceTree = "<group>"; };
-		DBD9D3781CA1C58500D11EED /* PlayerSimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSimpleViewController.h; sourceTree = "<group>"; };
-		DBD9D3791CA1C58500D11EED /* PlayerSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSimpleViewController.m; sourceTree = "<group>"; };
+		DB9B22251CA6766600AFBF07 /* MagicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB9B22291CA6766600AFBF07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB9B22321CA6766700AFBF07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB9B22351CA6766700AFBF07 /* MagicVideo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MagicVideo.xcdatamodel; sourceTree = "<group>"; };
+		DB9B22371CA6766700AFBF07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB9B223C1CA6766700AFBF07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB9B22461CA677C000AFBF07 /* AAPLCameraAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraAppDelegate.h; sourceTree = "<group>"; };
+		DB9B22471CA677C000AFBF07 /* AAPLCameraAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCameraAppDelegate.m; sourceTree = "<group>"; };
+		DB9B22481CA677C000AFBF07 /* AAPLCameraPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraPreviewView.h; sourceTree = "<group>"; };
+		DB9B22491CA677C000AFBF07 /* AAPLCameraPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCameraPreviewView.m; sourceTree = "<group>"; };
+		DB9B224A1CA677C000AFBF07 /* AAPLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraViewController.h; sourceTree = "<group>"; };
+		DB9B224B1CA677C000AFBF07 /* AAPLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCameraViewController.m; sourceTree = "<group>"; };
+		DB9B224F1CA6781200AFBF07 /* AAPLPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLPlayerViewController.h; sourceTree = "<group>"; };
+		DB9B22501CA6781200AFBF07 /* AAPLPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLPlayerViewController.m; sourceTree = "<group>"; };
+		DB9B22511CA6781200AFBF07 /* APLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLAppDelegate.h; sourceTree = "<group>"; };
+		DB9B22521CA6781200AFBF07 /* APLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLAppDelegate.m; sourceTree = "<group>"; };
+		DB9B22531CA6781200AFBF07 /* APLEventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLEventsTableViewController.h; sourceTree = "<group>"; };
+		DB9B22541CA6781200AFBF07 /* APLEventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLEventsTableViewController.m; sourceTree = "<group>"; };
+		DB9B22551CA6781200AFBF07 /* APLTagSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLTagSelectionController.h; sourceTree = "<group>"; };
+		DB9B22561CA6781200AFBF07 /* APLTagSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLTagSelectionController.m; sourceTree = "<group>"; };
+		DB9B225B1CA6781C00AFBF07 /* PlayerSimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSimpleViewController.h; sourceTree = "<group>"; };
+		DB9B225C1CA6781C00AFBF07 /* PlayerSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSimpleViewController.m; sourceTree = "<group>"; };
+		DB9B225E1CA6787500AFBF07 /* APLEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLEvent.h; sourceTree = "<group>"; };
+		DB9B225F1CA6787500AFBF07 /* SavVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavVideo.h; sourceTree = "<group>"; };
+		DB9B22601CA6787500AFBF07 /* APLEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLEvent.m; sourceTree = "<group>"; };
+		DB9B22611CA6787500AFBF07 /* SavVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavVideo.m; sourceTree = "<group>"; };
+		DB9B22621CA6787500AFBF07 /* APLTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLTag.m; sourceTree = "<group>"; };
+		DB9B22631CA6787500AFBF07 /* APLTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLTag.h; sourceTree = "<group>"; };
+		DB9B22641CA6787500AFBF07 /* DataSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSettings.m; sourceTree = "<group>"; };
+		DB9B22651CA6787500AFBF07 /* DataSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSettings.h; sourceTree = "<group>"; };
+		DB9B226A1CA678B400AFBF07 /* APLEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLEventTableViewCell.h; sourceTree = "<group>"; };
+		DB9B226B1CA678B400AFBF07 /* APLEditableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLEditableTableViewCell.h; sourceTree = "<group>"; };
+		DB9B226C1CA678B400AFBF07 /* APLEditableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLEditableTableViewCell.m; sourceTree = "<group>"; };
+		DB9B226D1CA678B400AFBF07 /* APLEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLEventTableViewCell.m; sourceTree = "<group>"; };
+		DB9B22701CA6797200AFBF07 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DB9B22741CA6799000AFBF07 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DB9B22751CA6799000AFBF07 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DB9B22761CA6799000AFBF07 /* parametres.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parametres.plist; sourceTree = "<group>"; };
+		DB9B227A1CA67A5D00AFBF07 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		DB9B227C1CA67A7500AFBF07 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		DB9B227E1CA67A7E00AFBF07 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DB9B227F1CA67A7E00AFBF07 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		DB9B22821CA67AC700AFBF07 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DB9B22841CA67AD800AFBF07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DB9B22861CA67AEE00AFBF07 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DB9B22881CA67B2F00AFBF07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DBC9A9E11CA08CF4002C2CDF /* Frameworks */ = {
+		DB9B22221CA6766600AFBF07 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9B22891CA67B2F00AFBF07 /* UIKit.framework in Frameworks */,
+				DB9B22871CA67AEE00AFBF07 /* CoreData.framework in Frameworks */,
+				DB9B22851CA67AD800AFBF07 /* CoreGraphics.framework in Frameworks */,
+				DB9B22831CA67AC700AFBF07 /* CoreLocation.framework in Frameworks */,
+				DB9B22801CA67A7E00AFBF07 /* AVFoundation.framework in Frameworks */,
+				DB9B227D1CA67A7500AFBF07 /* Photos.framework in Frameworks */,
+				DB9B227B1CA67A5D00AFBF07 /* CoreMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DBC9A9DB1CA08CF4002C2CDF = {
+		DB9B221C1CA6766600AFBF07 = {
 			isa = PBXGroup;
 			children = (
-				DBC9A9E61CA08CF4002C2CDF /* MagicVideo */,
-				DBC9A9E51CA08CF4002C2CDF /* Products */,
+				DB9B22271CA6766600AFBF07 /* MagicVideo */,
+				DB9B228A1CA67B5900AFBF07 /* Frameworks */,
+				DB9B22261CA6766600AFBF07 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DBC9A9E51CA08CF4002C2CDF /* Products */ = {
+		DB9B22261CA6766600AFBF07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DBC9A9E41CA08CF4002C2CDF /* MagicVideo.app */,
+				DB9B22251CA6766600AFBF07 /* MagicVideo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DBC9A9E61CA08CF4002C2CDF /* MagicVideo */ = {
+		DB9B22271CA6766600AFBF07 /* MagicVideo */ = {
 			isa = PBXGroup;
 			children = (
-				DBD9D3771CA1BBD300D11EED /* Base */,
-				DBD9D3681CA1A24100D11EED /* PlayView */,
-				DBD9D3691CA1A25B00D11EED /* CameraView */,
-				DBD9D3761CA1A38700D11EED /* Model */,
-				DBC9A9F01CA08CF4002C2CDF /* Main.storyboard */,
-				DBC9A9F61CA08CF4002C2CDF /* Assets.xcassets */,
-				DBC9A9F81CA08CF4002C2CDF /* LaunchScreen.storyboard */,
-				DBC9A9FB1CA08CF4002C2CDF /* Info.plist */,
-				DBAA1CBB1CA415A0009818CE /* parametres.plist */,
-				DBC9A9E71CA08CF4002C2CDF /* Supporting Files */,
+				DB9B22431CA6772F00AFBF07 /* Controller */,
+				DB9B22421CA6771B00AFBF07 /* Camera */,
+				DB9B22451CA6775700AFBF07 /* table view cell */,
+				DB9B22441CA6774100AFBF07 /* Model */,
+				DB9B22281CA6766600AFBF07 /* Supporting Files */,
 			);
 			path = MagicVideo;
 			sourceTree = "<group>";
 		};
-		DBC9A9E71CA08CF4002C2CDF /* Supporting Files */ = {
+		DB9B22281CA6766600AFBF07 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DBC9A9E81CA08CF4002C2CDF /* main.m */,
+				DB9B22371CA6766700AFBF07 /* Assets.xcassets */,
+				DB9B22741CA6799000AFBF07 /* Default.png */,
+				DB9B22751CA6799000AFBF07 /* Default@2x.png */,
+				DB9B22761CA6799000AFBF07 /* parametres.plist */,
+				DB9B22701CA6797200AFBF07 /* Default-568h@2x.png */,
+				DB9B223C1CA6766700AFBF07 /* Info.plist */,
+				DB9B22291CA6766600AFBF07 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DBD9D3681CA1A24100D11EED /* PlayView */ = {
+		DB9B22421CA6771B00AFBF07 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				DB1F67591CA2B70E0008F1B9 /* TitreViewController.h */,
-				DB1F675A1CA2B70E0008F1B9 /* TitreViewController.m */,
-				DB1F67561CA2B3280008F1B9 /* CategoryViewController.h */,
-				DB1F67571CA2B3280008F1B9 /* CategoryViewController.m */,
-				DB1F67531CA2A84D0008F1B9 /* CategoryTableViewController.h */,
-				DB1F67541CA2A84D0008F1B9 /* CategoryTableViewController.m */,
-				DBD9D3781CA1C58500D11EED /* PlayerSimpleViewController.h */,
-				DBD9D3791CA1C58500D11EED /* PlayerSimpleViewController.m */,
-				DBD9D36A1CA1A27E00D11EED /* AAPLPlayerViewController.h */,
-				DBD9D36B1CA1A27E00D11EED /* AAPLPlayerViewController.m */,
+				DB9B22461CA677C000AFBF07 /* AAPLCameraAppDelegate.h */,
+				DB9B22471CA677C000AFBF07 /* AAPLCameraAppDelegate.m */,
+				DB9B22481CA677C000AFBF07 /* AAPLCameraPreviewView.h */,
+				DB9B22491CA677C000AFBF07 /* AAPLCameraPreviewView.m */,
+				DB9B224A1CA677C000AFBF07 /* AAPLCameraViewController.h */,
+				DB9B224B1CA677C000AFBF07 /* AAPLCameraViewController.m */,
 			);
-			name = PlayView;
+			name = Camera;
 			sourceTree = "<group>";
 		};
-		DBD9D3691CA1A25B00D11EED /* CameraView */ = {
+		DB9B22431CA6772F00AFBF07 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DBD9D36D1CA1A29700D11EED /* AAPLCameraAppDelegate.h */,
-				DBD9D36E1CA1A29700D11EED /* AAPLCameraAppDelegate.m */,
-				DBD9D36F1CA1A29700D11EED /* AAPLCameraPreviewView.h */,
-				DBD9D3701CA1A29700D11EED /* AAPLCameraPreviewView.m */,
-				DBD9D3711CA1A29700D11EED /* AAPLCameraViewController.h */,
-				DBD9D3721CA1A29700D11EED /* AAPLCameraViewController.m */,
+				DB9B22531CA6781200AFBF07 /* APLEventsTableViewController.h */,
+				DB9B22541CA6781200AFBF07 /* APLEventsTableViewController.m */,
+				DB9B22551CA6781200AFBF07 /* APLTagSelectionController.h */,
+				DB9B22561CA6781200AFBF07 /* APLTagSelectionController.m */,
+				DB9B225B1CA6781C00AFBF07 /* PlayerSimpleViewController.h */,
+				DB9B225C1CA6781C00AFBF07 /* PlayerSimpleViewController.m */,
+				DB9B224F1CA6781200AFBF07 /* AAPLPlayerViewController.h */,
+				DB9B22501CA6781200AFBF07 /* AAPLPlayerViewController.m */,
+				DB9B22511CA6781200AFBF07 /* APLAppDelegate.h */,
+				DB9B22521CA6781200AFBF07 /* APLAppDelegate.m */,
 			);
-			name = CameraView;
+			name = Controller;
 			sourceTree = "<group>";
 		};
-		DBD9D3761CA1A38700D11EED /* Model */ = {
+		DB9B22441CA6774100AFBF07 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DBAA1CBD1CA416A9009818CE /* DataSettings.h */,
-				DBAA1CBE1CA416A9009818CE /* DataSettings.m */,
-				DB0620E21CA344E4009AA161 /* APLCoreDataStackManager.h */,
-				DB0620E31CA344E4009AA161 /* APLCoreDataStackManager.m */,
-				DB60117D1CA08F2600DF2E68 /* ModelVideo.h */,
-				DB60117E1CA08F2600DF2E68 /* ModelVideo.m */,
-				DB0620E01CA303C5009AA161 /* ModelCategorie.h */,
-				DB0620DF1CA303C5009AA161 /* ModelCategorie.m */,
-				DB60117F1CA08F2600DF2E68 /* SavVideo.h */,
-				DB6011801CA08F2600DF2E68 /* SavVideo.m */,
+				DB9B22341CA6766700AFBF07 /* MagicVideo.xcdatamodeld */,
+				DB9B22311CA6766700AFBF07 /* Main.storyboard */,
+				DB9B225E1CA6787500AFBF07 /* APLEvent.h */,
+				DB9B22601CA6787500AFBF07 /* APLEvent.m */,
+				DB9B225F1CA6787500AFBF07 /* SavVideo.h */,
+				DB9B22611CA6787500AFBF07 /* SavVideo.m */,
+				DB9B22621CA6787500AFBF07 /* APLTag.m */,
+				DB9B22631CA6787500AFBF07 /* APLTag.h */,
+				DB9B22641CA6787500AFBF07 /* DataSettings.m */,
+				DB9B22651CA6787500AFBF07 /* DataSettings.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		DBD9D3771CA1BBD300D11EED /* Base */ = {
+		DB9B22451CA6775700AFBF07 /* table view cell */ = {
 			isa = PBXGroup;
 			children = (
-				DB0620E51CA3FA05009AA161 /* DetailViewController.h */,
-				DB0620E61CA3FA05009AA161 /* DetailViewController.m */,
-				DBC9A9EA1CA08CF4002C2CDF /* AppDelegate.h */,
-				DBC9A9EB1CA08CF4002C2CDF /* AppDelegate.m */,
-				DB6011761CA08EDF00DF2E68 /* TableViewController.h */,
-				DB6011741CA08ECE00DF2E68 /* TableViewController.m */,
+				DB9B226A1CA678B400AFBF07 /* APLEventTableViewCell.h */,
+				DB9B226D1CA678B400AFBF07 /* APLEventTableViewCell.m */,
+				DB9B226C1CA678B400AFBF07 /* APLEditableTableViewCell.m */,
+				DB9B226B1CA678B400AFBF07 /* APLEditableTableViewCell.h */,
 			);
-			name = Base;
+			name = "table view cell";
+			sourceTree = "<group>";
+		};
+		DB9B228A1CA67B5900AFBF07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB9B22881CA67B2F00AFBF07 /* UIKit.framework */,
+				DB9B22861CA67AEE00AFBF07 /* CoreData.framework */,
+				DB9B22841CA67AD800AFBF07 /* CoreGraphics.framework */,
+				DB9B22821CA67AC700AFBF07 /* CoreLocation.framework */,
+				DB9B227E1CA67A7E00AFBF07 /* AVFoundation.framework */,
+				DB9B227F1CA67A7E00AFBF07 /* AVKit.framework */,
+				DB9B227C1CA67A7500AFBF07 /* Photos.framework */,
+				DB9B227A1CA67A5D00AFBF07 /* CoreMedia.framework */,
+			);
+			name = Frameworks;
+			path = MagicVideo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DBC9A9E31CA08CF4002C2CDF /* MagicVideo */ = {
+		DB9B22241CA6766600AFBF07 /* MagicVideo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBC9A9FE1CA08CF4002C2CDF /* Build configuration list for PBXNativeTarget "MagicVideo" */;
+			buildConfigurationList = DB9B223F1CA6766700AFBF07 /* Build configuration list for PBXNativeTarget "MagicVideo" */;
 			buildPhases = (
-				DBC9A9E01CA08CF4002C2CDF /* Sources */,
-				DBC9A9E11CA08CF4002C2CDF /* Frameworks */,
-				DBC9A9E21CA08CF4002C2CDF /* Resources */,
+				DB9B22211CA6766600AFBF07 /* Sources */,
+				DB9B22221CA6766600AFBF07 /* Frameworks */,
+				DB9B22231CA6766600AFBF07 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -201,25 +239,25 @@
 			);
 			name = MagicVideo;
 			productName = MagicVideo;
-			productReference = DBC9A9E41CA08CF4002C2CDF /* MagicVideo.app */;
+			productReference = DB9B22251CA6766600AFBF07 /* MagicVideo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DBC9A9DC1CA08CF4002C2CDF /* Project object */ = {
+		DB9B221D1CA6766600AFBF07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Pastouret Roger";
 				TargetAttributes = {
-					DBC9A9E31CA08CF4002C2CDF = {
-						CreatedOnToolsVersion = 7.2.1;
+					DB9B22241CA6766600AFBF07 = {
+						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = TNC26WW3G9;
 					};
 				};
 			};
-			buildConfigurationList = DBC9A9DF1CA08CF4002C2CDF /* Build configuration list for PBXProject "MagicVideo" */;
+			buildConfigurationList = DB9B22201CA6766600AFBF07 /* Build configuration list for PBXProject "MagicVideo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -227,81 +265,75 @@
 				en,
 				Base,
 			);
-			mainGroup = DBC9A9DB1CA08CF4002C2CDF;
-			productRefGroup = DBC9A9E51CA08CF4002C2CDF /* Products */;
+			mainGroup = DB9B221C1CA6766600AFBF07;
+			productRefGroup = DB9B22261CA6766600AFBF07 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DBC9A9E31CA08CF4002C2CDF /* MagicVideo */,
+				DB9B22241CA6766600AFBF07 /* MagicVideo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DBC9A9E21CA08CF4002C2CDF /* Resources */ = {
+		DB9B22231CA6766600AFBF07 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC9A9FA1CA08CF4002C2CDF /* LaunchScreen.storyboard in Resources */,
-				DBC9A9F71CA08CF4002C2CDF /* Assets.xcassets in Resources */,
-				DBAA1CBC1CA415A0009818CE /* parametres.plist in Resources */,
-				DBC9A9F21CA08CF4002C2CDF /* Main.storyboard in Resources */,
+				DB9B22781CA6799000AFBF07 /* Default@2x.png in Resources */,
+				DB9B22791CA6799000AFBF07 /* parametres.plist in Resources */,
+				DB9B22381CA6766700AFBF07 /* Assets.xcassets in Resources */,
+				DB9B22331CA6766700AFBF07 /* Main.storyboard in Resources */,
+				DB9B22711CA6797200AFBF07 /* Default-568h@2x.png in Resources */,
+				DB9B22771CA6799000AFBF07 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DBC9A9E01CA08CF4002C2CDF /* Sources */ = {
+		DB9B22211CA6766600AFBF07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB1F67551CA2A84D0008F1B9 /* CategoryTableViewController.m in Sources */,
-				DB0620E11CA303C5009AA161 /* ModelCategorie.m in Sources */,
-				DB0620E71CA3FA05009AA161 /* DetailViewController.m in Sources */,
-				DBC9A9EC1CA08CF4002C2CDF /* AppDelegate.m in Sources */,
-				DBD9D37A1CA1C58500D11EED /* PlayerSimpleViewController.m in Sources */,
-				DB6011831CA08F2600DF2E68 /* ModelVideo.m in Sources */,
-				DB0620E41CA344E4009AA161 /* APLCoreDataStackManager.m in Sources */,
-				DBC9A9E91CA08CF4002C2CDF /* main.m in Sources */,
-				DBD9D3731CA1A29700D11EED /* AAPLCameraAppDelegate.m in Sources */,
-				DB1F675B1CA2B70E0008F1B9 /* TitreViewController.m in Sources */,
-				DBD9D36C1CA1A27E00D11EED /* AAPLPlayerViewController.m in Sources */,
-				DBD9D3741CA1A29700D11EED /* AAPLCameraPreviewView.m in Sources */,
-				DB1F67581CA2B3280008F1B9 /* CategoryViewController.m in Sources */,
-				DBAA1CBF1CA416A9009818CE /* DataSettings.m in Sources */,
-				DB6011841CA08F2600DF2E68 /* SavVideo.m in Sources */,
-				DB6011751CA08ECE00DF2E68 /* TableViewController.m in Sources */,
-				DBD9D3751CA1A29700D11EED /* AAPLCameraViewController.m in Sources */,
+				DB9B226F1CA678B400AFBF07 /* APLEventTableViewCell.m in Sources */,
+				DB9B22661CA6787500AFBF07 /* APLEvent.m in Sources */,
+				DB9B225D1CA6781C00AFBF07 /* PlayerSimpleViewController.m in Sources */,
+				DB9B225A1CA6781200AFBF07 /* APLTagSelectionController.m in Sources */,
+				DB9B22681CA6787500AFBF07 /* APLTag.m in Sources */,
+				DB9B224C1CA677C000AFBF07 /* AAPLCameraAppDelegate.m in Sources */,
+				DB9B22591CA6781200AFBF07 /* APLEventsTableViewController.m in Sources */,
+				DB9B22571CA6781200AFBF07 /* AAPLPlayerViewController.m in Sources */,
+				DB9B222A1CA6766600AFBF07 /* main.m in Sources */,
+				DB9B22581CA6781200AFBF07 /* APLAppDelegate.m in Sources */,
+				DB9B22361CA6766700AFBF07 /* MagicVideo.xcdatamodeld in Sources */,
+				DB9B22691CA6787500AFBF07 /* DataSettings.m in Sources */,
+				DB9B224D1CA677C000AFBF07 /* AAPLCameraPreviewView.m in Sources */,
+				DB9B22671CA6787500AFBF07 /* SavVideo.m in Sources */,
+				DB9B224E1CA677C000AFBF07 /* AAPLCameraViewController.m in Sources */,
+				DB9B226E1CA678B400AFBF07 /* APLEditableTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DBC9A9F01CA08CF4002C2CDF /* Main.storyboard */ = {
+		DB9B22311CA6766700AFBF07 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DBC9A9F11CA08CF4002C2CDF /* Base */,
+				DB9B22321CA6766700AFBF07 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DBC9A9F81CA08CF4002C2CDF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DBC9A9F91CA08CF4002C2CDF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DBC9A9FC1CA08CF4002C2CDF /* Debug */ = {
+		DB9B223D1CA6766700AFBF07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -334,7 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -342,10 +374,11 @@
 			};
 			name = Debug;
 		};
-		DBC9A9FD1CA08CF4002C2CDF /* Release */ = {
+		DB9B223E1CA6766700AFBF07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -372,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -380,27 +413,26 @@
 			};
 			name = Release;
 		};
-		DBC9A9FF1CA08CF4002C2CDF /* Debug */ = {
+		DB9B22401CA6766700AFBF07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MagicVideo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prv.MagicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		DBC9AA001CA08CF4002C2CDF /* Release */ = {
+		DB9B22411CA6766700AFBF07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MagicVideo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prv.MagicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,25 +442,37 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DBC9A9DF1CA08CF4002C2CDF /* Build configuration list for PBXProject "MagicVideo" */ = {
+		DB9B22201CA6766600AFBF07 /* Build configuration list for PBXProject "MagicVideo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DBC9A9FC1CA08CF4002C2CDF /* Debug */,
-				DBC9A9FD1CA08CF4002C2CDF /* Release */,
+				DB9B223D1CA6766700AFBF07 /* Debug */,
+				DB9B223E1CA6766700AFBF07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBC9A9FE1CA08CF4002C2CDF /* Build configuration list for PBXNativeTarget "MagicVideo" */ = {
+		DB9B223F1CA6766700AFBF07 /* Build configuration list for PBXNativeTarget "MagicVideo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DBC9A9FF1CA08CF4002C2CDF /* Debug */,
-				DBC9AA001CA08CF4002C2CDF /* Release */,
+				DB9B22401CA6766700AFBF07 /* Debug */,
+				DB9B22411CA6766700AFBF07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DB9B22341CA6766700AFBF07 /* MagicVideo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB9B22351CA6766700AFBF07 /* MagicVideo.xcdatamodel */,
+			);
+			currentVersion = DB9B22351CA6766700AFBF07 /* MagicVideo.xcdatamodel */;
+			path = MagicVideo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = DBC9A9DC1CA08CF4002C2CDF /* Project object */;
+	rootObject = DB9B221D1CA6766600AFBF07 /* Project object */;
 }

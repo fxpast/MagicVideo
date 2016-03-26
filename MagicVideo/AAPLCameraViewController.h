@@ -3,7 +3,8 @@
 	Camera view controller.
 */
 
-@import UIKit;
+#import <UIKit/UIKit.h>
+
 
 @interface AAPLCameraViewController : UIViewController
 

@@ -4,7 +4,7 @@
 	Player view controller.
 */
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface PlayerSimpleViewController : UIViewController <UINavigationControllerDelegate>
 

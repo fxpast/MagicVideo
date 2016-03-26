@@ -4,7 +4,8 @@
 	Application delegate.
 */
 
-@import UIKit;
+#import <UIKit/UIKit.h>
+
 
 @interface AAPLCameraAppDelegate : UIResponder <UIApplicationDelegate>
 

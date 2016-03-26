@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15D21" minimumToolsVersion="Automatic">
-    <entity name="Categorie" representedClassName="ModelCategorie" isAbstract="YES" syncable="YES">
-        <attribute name="id_gr" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="recevoir" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Video" syncable="YES"/>
-    </entity>
-    <entity name="Video" representedClassName="ModelVideo" isAbstract="YES" syncable="YES">
+    <entity name="APLEvent" representedClassName="APLEvent" syncable="YES">
         <attribute name="adresseVideo" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id_groupe" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="imageVideo" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="nom_groupe" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="titre" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="stocker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categorie" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="imagevideo" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="tag" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="APLTag" inverseName="events" inverseEntity="APLTag" syncable="YES"/>
+    </entity>
+    <entity name="APLTag" representedClassName="APLTag" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="APLEvent" inverseName="tags" inverseEntity="APLEvent" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Categorie" positionX="-63" positionY="9" width="128" height="90"/>
-        <element name="Video" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="APLTag" positionX="234" positionY="1458" width="128" height="73"/>
+        <element name="APLEvent" positionX="466" positionY="1692" width="128" height="133"/>
     </elements>
 </model>

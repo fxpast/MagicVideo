@@ -3,10 +3,14 @@
 	Player view controller.
 */
 
-@import AVFoundation;
-@import CoreMedia;
-@import ImageIO;
-@import MobileCoreServices;
+
+#import <CoreMedia/CoreMedia.h>
+#import <ImageIO/ImageIO.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <AVFoundation/AVFoundation.h>
+
+#import "AAPLCameraViewController.h"
+#import "AAPLCameraPreviewView.h"
 
 
 #import "SavVideo.h"

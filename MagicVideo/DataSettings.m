@@ -7,7 +7,7 @@
 }
 
 
-@synthesize openURL=_openURL, id_categ=_id_categ;
+@synthesize openURL=_openURL;
 
 +(id) singleton {
 	
@@ -30,7 +30,6 @@
             NSDictionary *DataDico = (NSDictionary *) [NSPropertyListSerialization propertyListWithData:plistXML options:NSPropertyListImmutable format:&format error:nil];
             instance->flgInit=true;
             instance.openURL=[DataDico objectForKey:@"openURL"];
-            instance.id_categ=[DataDico objectForKey:@"id_categ"];
             instance->flgInit=false;
             
 		}
@@ -43,36 +42,24 @@
 
 
 #pragma mark propriete openURL
-- (NSString *)getopenURL {
-		return _openURL;
+-(NSString*) openURL {
+    return _openURL;
 }
 
-- (void)setopenURL:(NSString *)openurl {
-    
+
+
+-(void) setOpenURL:(NSString *)openurl {
     _openURL=openurl;
     if (!flgInit) [self enregistrer];
-    
 }
 
-
-#pragma mark propriete id_categ
-- (NSString *)getid_categ {
-    return _id_categ;
-}
-
-- (void)setid_categ:(NSString *)idcateg {
-    
-    _id_categ=idcateg;
-    if (!flgInit) [self enregistrer];
-    
-}
 
 
 
 -(void) enregistrer
 {
     
-    NSDictionary *dico = [[NSDictionary alloc] initWithObjectsAndKeys:self.id_categ,@"id_categ", self.openURL,@"openURL", nil ];
+    NSDictionary *dico = [[NSDictionary alloc] initWithObjectsAndKeys:self.openURL,@"openURL", nil ];
     
     NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *plistPath = [rootPath stringByAppendingPathComponent:@"parametres.plist"];

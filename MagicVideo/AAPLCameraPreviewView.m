@@ -4,7 +4,7 @@
 	Camera preview view.
 */
 
-@import AVFoundation;
+#import <AVFoundation/AVFoundation.h>
 
 #import "AAPLCameraPreviewView.h"
 
