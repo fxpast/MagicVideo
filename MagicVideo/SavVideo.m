@@ -13,7 +13,7 @@
 @implementation SavVideo
 
 
-@synthesize url, addVideo, image;
+@synthesize url, addVideo, image, eventsArray;
 
 
 
@@ -24,7 +24,7 @@
     if (Zinstance == nil)
     {
         Zinstance = [[self alloc] init];
-        
+        Zinstance.eventsArray =[[NSMutableArray alloc] init];
     }
     
     return Zinstance;

@@ -380,7 +380,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fR7-uX-OLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5059" y="-321"/>
+            <point key="canvasLocation" x="4279" y="-481"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="IcA-g8-f3v">

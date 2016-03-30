@@ -144,7 +144,8 @@ typedef NS_ENUM( NSInteger, AVMetadataRecordPlaySetupResult ) {
 
 				AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self.previewView.layer;
 				previewLayer.connection.videoOrientation = initialVideoOrientation;
-				previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+				previewLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+                previewLayer.session.sessionPreset = AVCaptureSessionPreset640x480;
 				
 			} );
 		}
@@ -616,7 +617,7 @@ typedef NS_ENUM( NSInteger, AVMetadataRecordPlaySetupResult ) {
 		self.cameraButton.enabled = ( [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo].count > 1 );
 		self.recordButton.enabled = YES;
 		self.playerButton.enabled = YES;
-		[self.recordButton setTitle:NSLocalizedString( @"Record", @"Recording button record title") forState:UIControlStateNormal];
+		[self.recordButton setTitle:NSLocalizedString( @"Enregistrer", @"Titre du bouton d'enregistrement button") forState:UIControlStateNormal];
 	});
 }
 

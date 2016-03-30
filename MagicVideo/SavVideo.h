@@ -14,11 +14,14 @@
     NSURL  *url;
     BOOL addVideo;
     UIImage *image;
+    NSMutableArray *eventsArray;    
 }
 
 @property BOOL addVideo;
 @property (strong, nonatomic) NSURL  *url;
 @property (strong, nonatomic) UIImage *image;
+@property (nonatomic) NSMutableArray *eventsArray;
+
 
 + (id) singleton;
 
