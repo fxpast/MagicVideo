@@ -56,6 +56,7 @@ typedef NS_ENUM( NSInteger, AVMetadataRecordPlaySetupResult ) {
 
 	// Disable UI. The UI is enabled if and only if the session starts running.
 	self.cameraButton.enabled = NO;
+    self.cameraButton.hidden = !self.cameraButton.enabled;
 	self.recordButton.enabled = NO;
 
 	// Create the AVCaptureSession.
@@ -314,7 +315,8 @@ typedef NS_ENUM( NSInteger, AVMetadataRecordPlaySetupResult ) {
 		dispatch_async( dispatch_get_main_queue(), ^{
 			// Only enable the ability to change camera if the device has more than one camera.
 			self.cameraButton.enabled = isSessionRunning && ( [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo].count > 1 );
-			self.recordButton.enabled = isSessionRunning;
+			self.cameraButton.hidden = !self.cameraButton.enabled;
+            self.recordButton.enabled = isSessionRunning;
 		} );
 	}
 	else {
@@ -444,6 +446,7 @@ typedef NS_ENUM( NSInteger, AVMetadataRecordPlaySetupResult ) {
 	// Disable the Camera button until recording finishes, and disable the Record button until recording starts or finishes. See the
 	// AVCaptureFileOutputRecordingDelegate methods.
 	self.cameraButton.enabled = NO;
+    self.cameraButton.hidden = !self.cameraButton.enabled;
 	self.recordButton.enabled = NO;
 	self.playerButton.enabled = NO;
 
@@ -482,6 +485,7 @@ typedef NS_ENUM( NSInteger, AVMetadataRecordPlaySetupResult ) {
 - (IBAction)changeCamera:(id)sender
 {
 	self.cameraButton.enabled = NO;
+    self.cameraButton.hidden = !self.cameraButton.enabled;
 	self.recordButton.enabled = NO;
 
 	dispatch_async( self.sessionQueue, ^{
@@ -534,6 +538,7 @@ typedef NS_ENUM( NSInteger, AVMetadataRecordPlaySetupResult ) {
 
 		dispatch_async( dispatch_get_main_queue(), ^{
 			self.cameraButton.enabled = YES;
+            self.cameraButton.hidden = !self.cameraButton.enabled;
 			self.recordButton.enabled = YES;
 		} );
 	} );
@@ -615,6 +620,7 @@ typedef NS_ENUM( NSInteger, AVMetadataRecordPlaySetupResult ) {
 	dispatch_async( dispatch_get_main_queue(), ^{
 		// Only enable the ability to change camera if the device has more than one camera.
 		self.cameraButton.enabled = ( [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo].count > 1 );
+        self.cameraButton.hidden = !self.cameraButton.enabled;
 		self.recordButton.enabled = YES;
 		self.playerButton.enabled = YES;
 		[self.recordButton setTitle:NSLocalizedString( @"Enregistrer", @"Titre du bouton d'enregistrement button") forState:UIControlStateNormal];

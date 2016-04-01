@@ -48,6 +48,7 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     
+    
     /*
      Reload the table view if the locale changes -- look at APLEventTableViewCell.m to see how the table view cells are redisplayed.
      */
@@ -60,69 +61,40 @@
     wsavvideo = [SavVideo singleton];
     WVarPermnt = [DataSettings singleton];
     
-    if (WVarPermnt.openURL.length>0) {
-        
+    
          wsavvideo.url = [NSURL URLWithString:WVarPermnt.openURL];
         [[NSNotificationCenter defaultCenter]addObserver:self
                                                 selector:@selector(AffichePlayer)
                                                     name:UIApplicationDidBecomeActiveNotification
                                                   object:nil];
-       
+    
+    if (WVarPermnt.openURL.length>0) {
+        
         [self AffichePlayer];
-        
-        
     }
     
     [UIApplication sharedApplication].statusBarHidden=false;
     
 }
 
--(void) ChargeBaseDeDonnee{
-    
-    /*
-     Fetch existing events.
-     Create a fetch request for the Event entity; add a sort descriptor; then execute the fetch.
-     */
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"APLEvent"];
-    [request setFetchBatchSize:20];
-    
-    // Order the events by creation date, most recent first.
-    NSSortDescriptor *sortTag = [[NSSortDescriptor alloc] initWithKey:@"tag" ascending:YES];
-    NSSortDescriptor *sortName = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    NSArray *sortDescriptors = @[sortTag, sortName];
-    [request setSortDescriptors:sortDescriptors];
-    
-    // Execute the fetch.
-    NSError *error;
-    NSArray *fetchResults = [self.managedObjectContext executeFetchRequest:request error:&error];
-    if (fetchResults == nil) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-    
-    // Set eventsArray events array to a mutable copy of the fetch results.
-    [wsavvideo setEventsArray:[fetchResults mutableCopy]];
-    
-    
-    
-
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     
-    [super viewWillAppear:animated];
-    
-    [self ChargeBaseDeDonnee];
-    [self.tableView reloadData];
-
+    if (wsavvideo.pageVideo) {
+        [self AffichePlayer];
+    }
+    else {
+        
+        [super viewWillAppear:animated];
+        [self ChargeBaseDeDonnee];
+        [self.tableView reloadData];
+    }
     
 }
 
 -(void) viewDidAppear:(BOOL)animated{
     
+    [super viewDidAppear:animated];
     
     if (wsavvideo.addVideo) {
         wsavvideo.addVideo = false;
@@ -157,6 +129,40 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
+-(void) ChargeBaseDeDonnee{
+    
+    /*
+     Fetch existing events.
+     Create a fetch request for the Event entity; add a sort descriptor; then execute the fetch.
+     */
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"APLEvent"];
+    [request setFetchBatchSize:20];
+    
+    // Order the events by creation date, most recent first.
+    NSSortDescriptor *sortTag = [[NSSortDescriptor alloc] initWithKey:@"tag" ascending:YES];
+    NSSortDescriptor *sortName = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSArray *sortDescriptors = @[sortTag, sortName];
+    [request setSortDescriptors:sortDescriptors];
+    
+    // Execute the fetch.
+    NSError *error;
+    NSArray *fetchResults = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if (fetchResults == nil) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    // Set eventsArray events array to a mutable copy of the fetch results.
+    [wsavvideo setEventsArray:[fetchResults mutableCopy]];
+    
+    
+    
+    
 }
 
 

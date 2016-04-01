@@ -8,12 +8,14 @@
 #import <ImageIO/ImageIO.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <AVFoundation/AVFoundation.h>
-
+#import <Photos/PHPhotoLibrary.h>
+#import <Photos/PHAssetChangeRequest.h>
 
 #import "SavVideo.h"
 #import "AAPLPlayerViewController.h"
 
 @interface AAPLImagePickerController : UIImagePickerController
+
 
 @end
 
@@ -28,7 +30,7 @@
 @end
 
 
-@interface AAPLPlayerViewController () <AVPlayerItemMetadataOutputPushDelegate>
+@interface AAPLPlayerViewController () <AVPlayerItemMetadataOutputPushDelegate, UIAlertViewDelegate>
 
 {
     
@@ -37,6 +39,7 @@
     
 }
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActivityView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic, weak) IBOutlet UIView *playerView;
@@ -160,19 +163,27 @@
 
 - (IBAction)loadMoviesFromCameraRoll:(id)sender
 {
-	[self.player pause];
 
-	// Initialize UIImagePickerController to select a movie from the camera roll
-	AAPLImagePickerController *videoPicker = [[AAPLImagePickerController alloc] init];
-	videoPicker.delegate = self;
-	videoPicker.modalPresentationStyle = UIModalPresentationPopover;
-	videoPicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-	videoPicker.mediaTypes = @[(NSString*)kUTTypeMovie];
-	videoPicker.allowsEditing = NO;
-	if ( UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad )	{
-		videoPicker.popoverPresentationController.barButtonItem = self.libraryButton;
-	}
-	[self presentViewController:videoPicker animated:YES completion:nil];
+    [self ChargerVideoDeBiblio];
+    
+}
+
+-(void) ChargerVideoDeBiblio{
+
+    [self.player pause];
+    
+    // Initialize UIImagePickerController to select a movie from the camera roll
+    AAPLImagePickerController *videoPicker = [[AAPLImagePickerController alloc] init];
+    videoPicker.delegate = self;
+    videoPicker.modalPresentationStyle = UIModalPresentationPopover;
+    videoPicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    videoPicker.mediaTypes = @[(NSString*)kUTTypeMovie];
+    videoPicker.allowsEditing = NO;
+    if ( UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad )	{
+        videoPicker.popoverPresentationController.barButtonItem = self.libraryButton;
+    }
+    [self presentViewController:videoPicker animated:YES completion:nil];
+
 }
 
 #pragma mark Player utils
@@ -409,19 +420,237 @@
 
 #pragma mark - Image Picker Controller Delegate
 
+
+- (void)ModifierVideoPourURL:(NSURL *)URL {
+
+    [self.ActivityView startAnimating];
+    self.playerView.layer.backgroundColor = [[UIColor lightGrayColor] CGColor];
+  
+
+    // input file
+    AVAsset* asset = [AVAsset assetWithURL:URL];
+    
+    AVMutableComposition *composition = [AVMutableComposition composition];
+    [composition  addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
+    
+    // input clip
+    AVAssetTrack *videoTrack = [[asset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
+    
+    // crop clip to screen ratio
+    UIInterfaceOrientation orientation = [self orientationForTrack:asset];
+    BOOL isPortrait = (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown) ? YES: NO;
+    CGFloat complimentSize;
+    CGSize videoSize;
+    
+    if(isPortrait) {
+        complimentSize = [self getComplimentSize:videoTrack.naturalSize.height];
+        videoSize = CGSizeMake(videoTrack.naturalSize.height, complimentSize);
+    } else {
+        complimentSize = [self getComplimentSize:videoTrack.naturalSize.width];
+        videoSize = CGSizeMake(complimentSize, videoTrack.naturalSize.height);
+    }
+    
+    AVMutableVideoComposition* videoComposition = [AVMutableVideoComposition videoComposition];
+    videoComposition.renderSize = videoSize;
+    videoComposition.frameDuration = CMTimeMake(1, 30);
+    
+    AVMutableVideoCompositionInstruction *instruction = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
+    instruction.timeRange = CMTimeRangeMake(kCMTimeZero, CMTimeMakeWithSeconds(60, 30) );
+    
+    // rotate and position video
+    AVMutableVideoCompositionLayerInstruction* transformer = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:videoTrack];
+    
+    CGFloat tx = (videoTrack.naturalSize.width-complimentSize)/2;
+    if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationLandscapeRight) {
+        // invert translation
+        tx *= -1;
+    }
+    
+    // t1: rotate and position video since it may have been cropped to screen ratio
+    CGAffineTransform t1 = CGAffineTransformTranslate(videoTrack.preferredTransform, tx, 0);
+    // t2/t3: mirror video horizontally
+    CGAffineTransform t2 = CGAffineTransformTranslate(t1, isPortrait?0:videoTrack.naturalSize.width, isPortrait?videoTrack.naturalSize.height:0);
+    CGAffineTransform t3 = CGAffineTransformScale(t2, isPortrait?1:-1, isPortrait?-1:1);
+    
+    [transformer setTransform:t3 atTime:kCMTimeZero];
+    instruction.layerInstructions = [NSArray arrayWithObject: transformer];
+    videoComposition.instructions = [NSArray arrayWithObject: instruction];
+
+    
+    // export
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *myPathDocs =  [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"mergeVideo-%d.mov",arc4random() % 1000]];
+    
+    NSURL *url = [NSURL fileURLWithPath:myPathDocs];
+    
+    AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:asset presetName:AVAssetExportPreset640x480];
+    exporter.outputURL=url;
+    exporter.outputFileType = AVFileTypeQuickTimeMovie;
+    exporter.videoComposition = videoComposition;
+    exporter.shouldOptimizeForNetworkUse = YES;
+    [exporter exportAsynchronouslyWithCompletionHandler:^
+     {
+         dispatch_async(dispatch_get_main_queue(), ^{
+             [self exportDidFinish:exporter];
+         });
+     }];
+    
+}
+
+
+- (void)exportDidFinish:(AVAssetExportSession*)session
+{
+    if(session.status == AVAssetExportSessionStatusCompleted)
+    {
+    
+        NSURL *outputURL = session.outputURL;
+        
+        // Save to the album
+        __block PHObjectPlaceholder *placeholder;
+        
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+            PHAssetChangeRequest* createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:outputURL];
+            placeholder = [createAssetRequest placeholderForCreatedAsset];
+            
+        } completionHandler:^(BOOL success, NSError *error) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (error) {
+                    
+                    UIAlertAction *actionOK = nil;
+                    
+                    // create action sheet
+                    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Echec de convertion video" preferredStyle:UIAlertControllerStyleActionSheet];
+                    
+                    //Button Non
+                    actionOK = [UIAlertAction
+                                actionWithTitle:@"Ok"
+                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+                                    // rien
+                                }];
+                    
+                    // Add button action
+                    [alertController addAction:actionOK];
+                    
+                    // show action sheet
+                    alertController.popoverPresentationController.barButtonItem = self.libraryButton;
+                    alertController.popoverPresentationController.sourceView = self.view;
+                    
+                    [self presentViewController:alertController animated:YES
+                                     completion:nil];
+                    
+                }
+                else{
+                    wURL = nil;
+                    [self ChargerVideoDeBiblio];
+                    
+                }
+            });
+
+        }];
+    }
+    
+    
+    self.playerView.layer.backgroundColor = [[UIColor darkGrayColor] CGColor];
+    [self.ActivityView stopAnimating];
+}
+
+
+- (CGFloat)getComplimentSize:(CGFloat)size {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat ratio = screenRect.size.height / screenRect.size.width;
+    
+    // we have to adjust the ratio for 16:9 screens
+    //if (ratio == 1.775) ratio = 1.77777777777778;
+    
+    // we have to adjust the ratio for 4:3 screens
+    if (ratio == 1.335) ratio = 1.33333333333338;
+    return size * ratio;
+}
+
+
+- (UIInterfaceOrientation)orientationForTrack:(AVAsset *)asset {
+    UIInterfaceOrientation orientation = UIInterfaceOrientationPortrait;
+    NSArray *tracks = [asset tracksWithMediaType:AVMediaTypeVideo];
+    
+    if([tracks count] > 0) {
+        AVAssetTrack *videoTrack = [tracks objectAtIndex:0];
+        CGAffineTransform t = videoTrack.preferredTransform;
+        
+        // Portrait
+        if(t.a == 0 && t.b == 1.0 && t.c == -1.0 && t.d == 0) {
+            orientation = UIInterfaceOrientationPortrait;
+        }
+        // PortraitUpsideDown
+        if(t.a == 0 && t.b == -1.0 && t.c == 1.0 && t.d == 0) {
+            orientation = UIInterfaceOrientationPortraitUpsideDown;
+        }
+        // LandscapeRight
+        if(t.a == 1.0 && t.b == 0 && t.c == 0 && t.d == 1.0) {
+            orientation = UIInterfaceOrientationLandscapeRight;
+        }
+        // LandscapeLeft
+        if(t.a == -1.0 && t.b == 0 && t.c == 0 && t.d == -1.0) {
+            orientation = UIInterfaceOrientationLandscapeLeft;
+        }
+    }
+    return orientation;
+}
+
+
+
 - (void)imagePickerController:(AAPLImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	[self dismissViewControllerAnimated:YES completion:nil];	
 	// First remove old observer
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:self.player.currentItem];
-	[self setupPlaybackForURL:info[UIImagePickerControllerReferenceURL]];
     
     wURL = info[UIImagePickerControllerReferenceURL];
-	picker.delegate = nil;
-	
-	self.playButton.enabled = YES;
+    
+    picker.delegate = nil;
+    
+    self.playButton.enabled = YES;
     self.doneButton.enabled = YES;
+    
+    
+    UIAlertAction *actionNom = nil;
+    UIAlertAction *actionOui = nil;
+    
+    // create action sheet
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Convertion Video" message:@"Voulez-vous convertir cette video en mode plein ecran?" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    //Button Non
+    actionNom = [UIAlertAction
+                    actionWithTitle:@"Non"
+                    style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+                        [self setupPlaybackForURL:wURL];
+                    }];
+    
+    //Button Oui
+    actionOui = [UIAlertAction
+                 actionWithTitle:@"Oui"
+                 style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+                      [self ModifierVideoPourURL:wURL];
+                 }];
+    
+    // Add button action
+    [alertController addAction:actionOui];
+    [alertController addAction:actionNom];
+    
+    // show action sheet
+    alertController.popoverPresentationController.barButtonItem = self.libraryButton;
+    alertController.popoverPresentationController.sourceView = self.view;
+    
+    [self presentViewController:alertController animated:YES
+                     completion:nil];
+    
 }
+
+
+
+
 
 - (void)imagePickerControllerDidCancel:(AAPLImagePickerController *)picker
 {

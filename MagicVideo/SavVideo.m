@@ -13,7 +13,7 @@
 @implementation SavVideo
 
 
-@synthesize url, addVideo, image, eventsArray;
+@synthesize url, addVideo, pageVideo, image, eventsArray;
 
 
 

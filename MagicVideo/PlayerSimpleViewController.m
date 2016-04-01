@@ -49,9 +49,9 @@
 {
     [super viewDidLoad];
     
-    self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    
+    self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth |
+                                  UIViewAutoresizingFlexibleLeftMargin |
+                                  UIViewAutoresizingFlexibleRightMargin);
     
     self.honorTimedMetadataTracksDuringPlayback = NO;
     
@@ -61,7 +61,9 @@
     dispatch_queue_t metadataQueue = dispatch_queue_create( "com.apple.metadataqueue", DISPATCH_QUEUE_SERIAL );
     self.itemMetadataOutput = [[AVPlayerItemMetadataOutput alloc] initWithIdentifiers:nil];
     [self.itemMetadataOutput setDelegate:self queue:metadataQueue];
+    
     wSavvideo = [SavVideo singleton];
+    wSavvideo.pageVideo = false;
     
    
     UIPanGestureRecognizer *zPanRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
@@ -78,6 +80,43 @@
     
     
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    
+    [super viewWillAppear:animated];
+    
+    [UIApplication sharedApplication].statusBarHidden=true;
+    
+
+    
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:self.player.currentItem];
+    [self setupPlaybackForURL:wSavvideo.url];
+    
+    //demarrer le Wtimer
+    wTimer = [NSTimer scheduledTimerWithTimeInterval: 0.50f target: self selector: @selector(Jouer) userInfo: nil repeats: NO];
+    
+    
+    
+}
+
+
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.seekToZeroBeforePlay = YES;
+}
+
+
+
+#pragma mark Player utils
 
 
 
@@ -99,7 +138,32 @@
         
         APLEvent *event;
         
-        if ((newCoord.x - wPosPreced.x) > (self.view.frame.size.width/6) && wPosPreced.x > (self.view.frame.size.width/2))
+        if ((newCoord.x - wPosPreced.x) > (self.view.frame.size.width/10))
+        {
+            //printf("C'est ok par la gauche");
+            
+            for (int i=0; i<wSavvideo.eventsArray.count; i++)
+            {
+                event = (APLEvent *)wSavvideo.eventsArray[i];
+                if (event.adresseVideo == wSavvideo.url.absoluteString)
+                {
+                    if (i >0)
+                    {
+                        event = (APLEvent *)wSavvideo.eventsArray[i-1];
+                        wSavvideo.url = [NSURL URLWithString:event.adresseVideo];
+                        [self Paginer];
+                        
+                        break;
+                    }
+                    
+                }
+            }
+            
+            
+        }
+        
+        
+        if ((wPosPreced.x - newCoord.x) > (self.view.frame.size.width/10))
         {
             //printf("C'est ok par la droite");
             
@@ -110,33 +174,10 @@
                 {
                     if (i < (wSavvideo.eventsArray.count-1))
                     {
-                      event = (APLEvent *)wSavvideo.eventsArray[i+1];
-                      wSavvideo.url = [NSURL URLWithString:event.adresseVideo];
-                      [self viewDidAppear:true];
-                      break;
-                    }
-                    
-                }
-            }
-            
-            
-        }
-        
-        
-        if ((wPosPreced.x - newCoord.x) > (self.view.frame.size.width/6) && wPosPreced.x < (self.view.frame.size.width/2))
-        {
-            //printf("C'est ok par la gauche");
-            
-            for (int i=0; i<wSavvideo.eventsArray.count; i++)
-            {
-                event = (APLEvent *)wSavvideo.eventsArray[i];
-                if (event.adresseVideo == wSavvideo.url.absoluteString)
-                {
-                    if (i <= (wSavvideo.eventsArray.count-1))
-                    {
-                        event = (APLEvent *)wSavvideo.eventsArray[i-1];
+                        event = (APLEvent *)wSavvideo.eventsArray[i+1];
                         wSavvideo.url = [NSURL URLWithString:event.adresseVideo];
-                        [self viewDidAppear:true];
+                        [self Paginer];
+                       
                         break;
                     }
                     
@@ -168,11 +209,12 @@
     
     
     if (touchPoint.y > hautDeb && touchPoint.y < hautFin) {
-        [self viewDidAppear:true];
+        [self viewDidAppear:YES]; //relecture video
+        
     }
     
     if (touchPoint.y > milieuDeb && touchPoint.y < milieuFin) {
-        [self dismissMe];
+        [self dismissMe]; //fermer video
     }
     
     if (touchPoint.y > basDeb && touchPoint.y < basFin) {
@@ -191,7 +233,11 @@
 
 
 
-
+-(void) Paginer{
+    
+    wSavvideo.pageVideo = true;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)dismissMe {
     
@@ -215,31 +261,6 @@
     
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [UIApplication sharedApplication].statusBarHidden=true;
-}
-
--(void) viewDidAppear:(BOOL)animated {
-    
-    [super viewDidAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:self.player.currentItem];
-    [self setupPlaybackForURL:wSavvideo.url];
-    
-    //demarrer le Wtimer
-    wTimer = [NSTimer scheduledTimerWithTimeInterval: 0.50f target: self selector: @selector(Jouer) userInfo: nil repeats: NO];
-    
-    
-}
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    self.seekToZeroBeforePlay = YES;
-}
-
-
-#pragma mark Player utils
 
 -(void)setupPlayerURL:(NSURL *)URL
 {

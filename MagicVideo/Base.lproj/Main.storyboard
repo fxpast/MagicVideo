@@ -248,23 +248,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zdf-Gm-h0K" customClass="AAPLCameraPreviewView">
                                 <rect key="frame" x="-4" y="0.0" width="608" height="600"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1e6-Fd-l2V">
-                                        <rect key="frame" x="360" y="538" width="216" height="36"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Camera">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="changeCamera:" destination="1Kg-76-pDo" eventType="touchUpInside" id="VGw-gP-AH3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7c-UJ-k34">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7c-UJ-k34">
                                         <rect key="frame" x="32" y="538" width="216" height="36"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -300,6 +284,21 @@
                                         <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1e6-Fd-l2V">
+                                        <rect key="frame" x="440" y="540" width="41" height="31"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="camera">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="changeCamera:" destination="1Kg-76-pDo" eventType="touchUpInside" id="VGw-gP-AH3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -414,6 +413,9 @@
                                     <constraint firstAttribute="trailing" secondItem="Cib-LV-HOf" secondAttribute="trailing" id="yeQ-Xu-3qd"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CRy-6R-BM2">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSP-sP-FeA">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
@@ -450,9 +452,11 @@
                             <constraint firstAttribute="bottom" secondItem="ZSP-sP-FeA" secondAttribute="bottom" id="0JP-Lw-k3B"/>
                             <constraint firstItem="ZSP-sP-FeA" firstAttribute="top" secondItem="oAm-sP-CAq" secondAttribute="bottom" constant="1" id="2GD-6H-3XX"/>
                             <constraint firstItem="ZSP-sP-FeA" firstAttribute="leading" secondItem="8dq-gY-ACA" secondAttribute="leading" id="EBb-VN-bSw"/>
+                            <constraint firstItem="CRy-6R-BM2" firstAttribute="centerY" secondItem="oAm-sP-CAq" secondAttribute="centerY" id="ZZg-UK-LEW"/>
                             <constraint firstItem="ZSP-sP-FeA" firstAttribute="trailing" secondItem="oAm-sP-CAq" secondAttribute="trailing" id="dCh-Hj-6kN"/>
                             <constraint firstAttribute="trailing" secondItem="ZSP-sP-FeA" secondAttribute="trailing" id="eDX-Kh-4jZ"/>
                             <constraint firstItem="oAm-sP-CAq" firstAttribute="top" secondItem="8dq-gY-ACA" secondAttribute="top" id="z1N-zF-5QF"/>
+                            <constraint firstItem="CRy-6R-BM2" firstAttribute="centerX" secondItem="oAm-sP-CAq" secondAttribute="centerX" id="zAW-xa-Lqt"/>
                             <constraint firstItem="ZSP-sP-FeA" firstAttribute="leading" secondItem="oAm-sP-CAq" secondAttribute="leading" id="zRT-wf-C28"/>
                         </constraints>
                     </view>
@@ -469,6 +473,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ActivityView" destination="CRy-6R-BM2" id="IW7-eg-U6H"/>
                         <outlet property="cameraButton" destination="zeu-0A-7wu" id="fHi-YL-peY"/>
                         <outlet property="doneButton" destination="E9u-Pk-iW5" id="B84-6z-09U"/>
                         <outlet property="libraryButton" destination="HCH-RT-Xs6" id="Rek-5Z-K3X"/>
@@ -519,4 +524,7 @@
             <point key="canvasLocation" x="6378" y="731"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="50" height="50"/>
+    </resources>
 </document>
